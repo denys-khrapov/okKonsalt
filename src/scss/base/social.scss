@@ -1,0 +1,42 @@
+/*! -- Social styles----------------------------- */
+.social {
+	display: flex;
+	flex-direction: row;
+	column-gap: 8px;
+
+	.btn-full {
+		padding: 6px;
+		background-color: $colors-full-white;
+
+		svg {
+			path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+
+		&:hover {
+			background-color: $graphite-800;
+
+			svg {
+				path {
+					fill: $colors-full-white
+				}
+			}
+		}
+
+		&:active {
+			background-color: $graphite-900;
+		}
+
+		&.blocked {
+			background: rgba(94, 94, 96, 0.15);
+			pointer-events: none;
+
+			svg {
+				path {
+					fill: $graphite-500;
+				}
+			}
+		}
+	}
+}

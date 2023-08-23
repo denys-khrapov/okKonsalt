@@ -1,0 +1,61 @@
+/*! -- Buttons styles----------------------------- */
+.btn-full {
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	column-gap: 8px;
+	color: $graphite-source;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	padding: 16px;
+	background-color: $green-source;
+	border-radius: 16px;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 2px solid transparent;
+
+	svg {
+		path {
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&:hover {
+		border: 2px solid $green-source;
+		background-color: $graphite-800;
+	}
+
+	&:active {
+		background-color: $graphite-900;
+	}
+
+	&.blocked {
+		background: rgba(94, 94, 96, 0.15);
+		color: $graphite-500;
+		pointer-events: none;
+
+		svg {
+			path {
+				fill: $graphite-500;
+			}
+		}
+	}
+
+	&.blocked:focus {
+		outline: none;
+	}
+}
+
+@media (max-width:$md1) {
+
+	/*! -- Buttons styles----------------------------- */
+	.btn-full {
+		padding: 12px;
+	}
+}

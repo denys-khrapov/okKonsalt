@@ -1,5 +1,8 @@
 @import "fonts";
 @import "base/mixins";
+@import "base/colors";
+
+
 
 $fontFamily: "OpenSans", sans-serif;
 $fontSize: 16px;
@@ -7,7 +10,7 @@ $fontSize: 16px;
 $minWidth: 320px;
 $maxWidth: 1920px;
 $maxWidthContainer: 1208px;
-$md1: 1199px;
+$md1: 1279px;
 $md2: 1024px;
 $md3: 767px;
 $md4: 575px;
@@ -23,8 +26,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.5;
-	color: #000;
-	background-color: #fff;
+	color: $graphite-500;
 }
 
 .wrapper {
@@ -33,15 +35,59 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+}
+
+.bg-noise-holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: 200px 200px;
+	background-repeat: repeat;
+	opacity: 0.75;
+	mix-blend-mode: overlay;
+	z-index: 2;
+}
+
+.bg-holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 1;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 50%;
+	}
+}
+
+
+.logo {
+	a {
+		display: flex;
+	}
 }
 
 .container {
+	position: relative;
+	z-index: 2;
 	width: 100%;
 	max-width: $maxWidthContainer;
 	margin: 0 auto;
 	padding: 0 16px;
 
-	@media (max-width: $md1) {}
+	@media (max-width: $md1) {
+		max-width: 100%;
+		padding: 0 32px;
+	}
 
 	@media (max-width: $md2) {}
 
@@ -55,5 +101,29 @@ body {
 }
 
 
+
+
+.title {
+	color: $graphite-900;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: normal;
+	margin: 0 0 64px 0;
+
+	i {
+		font-style: italic;
+		color: $green-source;
+		font-weight: 300;
+	}
+}
+
+
+@import "base/links";
+@import "base/buttons";
+@import "base/social";
+@import "base/cards";
+@import "base/badge";
+@import "base/person";
 @import "blocks/header";
+@import "blocks/reasons";
 @import "blocks/footer";
