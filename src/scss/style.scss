@@ -65,7 +65,7 @@ body {
 	img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
+		object-fit: fill;
 		object-position: 50% 50%;
 	}
 }
@@ -109,7 +109,6 @@ body {
 	font-size: 48px;
 	font-weight: 700;
 	line-height: normal;
-	margin: 0 0 64px 0;
 
 	i {
 		font-style: italic;
@@ -143,5 +142,6 @@ body {
 @import "base/person";
 @import "blocks/header";
 @import "blocks/reasons";
+@import "blocks/prices";
 @import "blocks/partners";
 @import "blocks/footer";

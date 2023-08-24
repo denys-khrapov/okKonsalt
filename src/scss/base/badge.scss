@@ -6,6 +6,7 @@
 	align-items: center;
 	column-gap: 4px;
 	width: fit-content;
+	position: relative;
 
 	&--small {
 		border-radius: 4px;
@@ -14,6 +15,79 @@
 		color: $colors-text-badge;
 		font-size: 12px;
 		font-weight: 400;
-		line-height: 1.4;
+		line-height: normal;
+	}
+
+	&--orange,
+	&--red {
+		border-radius: 12px;
+		padding: 16px 24px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 4px;
+		max-width: 151px;
+
+		h5 {
+			color: $colors-full-white;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+		span {
+			color: $graphite-50;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: normal;
+		}
+	}
+
+	&--orange {
+		background-color: $colors-promo-badge;
+	}
+
+	&--red {
+		background-color: $colors-2-promo-badge;
+	}
+
+	&__svg-holder {
+		position: absolute;
+		top: -38px;
+		right: -31px;
+	}
+}
+
+
+@media (max-width:$md1) {
+
+	/*! -- Badge styles----------------------------- */
+	.badge {
+
+		&--orange,
+		&--red {
+			padding: 8px;
+			max-width: 107px;
+
+			h5 {
+				font-size: 14px;
+			}
+
+			span {
+				font-size: 12px;
+			}
+		}
+
+		&__svg-holder {
+			top: -27px;
+			right: -17px;
+			width: 54px;
+			height: 54px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 }

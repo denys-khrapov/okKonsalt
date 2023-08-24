@@ -1,0 +1,225 @@
+/*! -- Prices styles----------------------------- */
+.prices {
+	padding: 128px 0 64px;
+	position: relative;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 64px;
+	}
+
+	&__header {
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: normal;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: row;
+		column-gap: 24px;
+		align-items: flex-start;
+	}
+
+	.card__inner {
+		position: relative;
+		row-gap: 32px;
+		justify-content: flex-start;
+		padding: 32px 24px;
+	}
+
+	.card {
+		h4 {
+			color: $graphite-900;
+			font-size: 24px;
+			font-weight: 400;
+			line-height: normal;
+			margin: 52px 0 0 0;
+		}
+
+		&:first-child {
+			h4 {
+				margin: 0;
+			}
+		}
+
+
+		ul {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			row-gap: 16px;
+
+			li {
+				list-style-type: none;
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				column-gap: 8px;
+				color: $graphite-700;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	&__text-holder {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		column-gap: 8px;
+	}
+
+	&__text {
+		color: $graphite-900;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: normal;
+	}
+
+	&__currency {
+		color: $graphite-700;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	.btn-full {
+		margin: 0 auto;
+		padding: 14px;
+	}
+
+	.badge {
+		position: absolute;
+
+		&--small {
+			background-color: $green-source;
+			text-transform: uppercase;
+			color: $colors-full-white;
+			top: 32px;
+			left: 24px;
+		}
+
+		&--orange,
+		&--red {
+			top: 16px;
+			right: 16px;
+		}
+	}
+}
+
+
+@media (max-width:$md1) {
+
+	/*! -- Prices styles----------------------------- */
+	.prices {
+		padding: 64px 0;
+
+		.bg-holder {
+			top: -50%;
+			height: auto;
+		}
+
+		&__container {
+			row-gap: 32px;
+		}
+
+		&__title {
+			font-size: 20px;
+			font-weight: 700;
+		}
+
+		&__cards {
+			gap: 16px;
+			flex-wrap: wrap;
+		}
+
+		.card {
+			max-width: 100%;
+			min-width: 256px;
+			flex: 1 0 0;
+
+			min-height: auto;
+
+			&__inner {
+				row-gap: 16px;
+				padding: 24px 16px;
+			}
+
+			h4 {
+				font-size: 16px;
+				line-height: 1.5;
+				margin: 36px 0 0 0;
+			}
+
+			ul {
+				row-gap: 8px;
+
+				li {
+					font-size: 12px;
+					line-height: normal;
+					column-gap: 4px;
+
+					img {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+
+		&__currency {
+			font-size: 12px;
+		}
+
+		.btn-full {
+			padding: 9px 12px;
+		}
+
+		.badge {
+			&--small {
+				left: 16px;
+				top: 24px;
+			}
+		}
+
+	}
+}
+
+
+
+@media (max-width: 1024px) {
+	/*! -- Prices styles----------------------------- */
+
+	.prices {
+		.bg-holder {
+			top: -25%;
+		}
+	}
+}
+
+@media (max-width: 863px) {
+	/*! -- Prices styles----------------------------- */
+
+	.prices {
+		.bg-holder {
+			height: 100%;
+			top: 0;
+
+			img {
+				object-fit: cover;
+			}
+		}
+	}
+}

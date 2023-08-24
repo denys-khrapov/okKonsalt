@@ -208,8 +208,8 @@ body.lock {
 .bg-holder img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: fill;
+  object-fit: fill;
   -o-object-position: 50% 50%;
   object-position: 50% 50%;
 }
@@ -240,7 +240,6 @@ body.lock {
   font-size: 48px;
   font-weight: 700;
   line-height: normal;
-  margin: 0 0 64px 0;
 }
 
 .title i {
@@ -647,6 +646,7 @@ input.novalid:focus {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
 }
 
 .badge--small {
@@ -656,7 +656,52 @@ input.novalid:focus {
   color: #1E429F;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: normal;
+}
+
+.badge--orange,
+.badge--red {
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 4px;
+  max-width: 151px;
+}
+
+.badge--orange h5,
+.badge--red h5 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.badge--orange span,
+.badge--red span {
+  color: #F3F3F4;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.badge--orange {
+  background-color: #F38332;
+}
+
+.badge--red {
+  background-color: #FF4B24;
+}
+
+.badge__svg-holder {
+  position: absolute;
+  top: -38px;
+  right: -31px;
 }
 
 /*! -- Person styles----------------------------- */
@@ -794,6 +839,158 @@ input.novalid:focus {
 .reasons__card--text h4 {
   font-size: 24px;
   font-weight: 400;
+}
+
+/*! -- Prices styles----------------------------- */
+
+.prices {
+  padding: 128px 0 64px;
+  position: relative;
+}
+
+.prices__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 64px;
+}
+
+.prices__header {
+  text-align: center;
+}
+
+.prices__title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.prices__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.prices .card__inner {
+  position: relative;
+  row-gap: 32px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 32px 24px;
+}
+
+.prices .card h4 {
+  color: #39393A;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 52px 0 0 0;
+}
+
+.prices .card:first-child h4 {
+  margin: 0;
+}
+
+.prices .card ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.prices .card ul li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+  color: #5E5E60;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.prices__text-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+}
+
+.prices__text {
+  color: #39393A;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.prices__currency {
+  color: #5E5E60;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.prices .btn-full {
+  margin: 0 auto;
+  padding: 14px;
+}
+
+.prices .badge {
+  position: absolute;
+}
+
+.prices .badge--small {
+  background-color: #8AB32C;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  top: 32px;
+  left: 24px;
+}
+
+.prices .badge--orange,
+.prices .badge--red {
+  top: 16px;
+  right: 16px;
 }
 
 /*! -- Partners styles----------------------------- */
@@ -1064,6 +1261,38 @@ input.novalid:focus {
     padding: 12px;
   }
 
+  /*! -- Badge styles----------------------------- */
+
+  .badge--orange,
+  .badge--red {
+    padding: 8px;
+    max-width: 107px;
+  }
+
+  .badge--orange h5,
+  .badge--red h5 {
+    font-size: 14px;
+  }
+
+  .badge--orange span,
+  .badge--red span {
+    font-size: 12px;
+  }
+
+  .badge__svg-holder {
+    top: -27px;
+    right: -17px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .badge__svg-holder img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   .reasons .card {
     min-width: 256px;
     max-width: 389px;
@@ -1071,6 +1300,86 @@ input.novalid:focus {
 
   .reasons__image-holder {
     height: 376px;
+  }
+
+  /*! -- Prices styles----------------------------- */
+
+  .prices {
+    padding: 64px 0;
+  }
+
+  .prices .bg-holder {
+    top: -50%;
+    height: auto;
+  }
+
+  .prices__container {
+    row-gap: 32px;
+  }
+
+  .prices__title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .prices__cards {
+    gap: 16px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .prices .card {
+    max-width: 100%;
+    min-width: 256px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+    min-height: auto;
+  }
+
+  .prices .card__inner {
+    row-gap: 16px;
+    padding: 24px 16px;
+  }
+
+  .prices .card h4 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 36px 0 0 0;
+  }
+
+  .prices .card ul {
+    row-gap: 8px;
+  }
+
+  .prices .card ul li {
+    font-size: 12px;
+    line-height: normal;
+    -webkit-column-gap: 4px;
+    -moz-column-gap: 4px;
+    column-gap: 4px;
+  }
+
+  .prices .card ul li img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .prices__text {
+    font-size: 16px;
+  }
+
+  .prices__currency {
+    font-size: 12px;
+  }
+
+  .prices .btn-full {
+    padding: 9px 12px;
+  }
+
+  .prices .badge--small {
+    left: 16px;
+    top: 24px;
   }
 
   /*! -- Partners styles----------------------------- */
@@ -1251,5 +1560,27 @@ input.novalid:focus {
   .footer__email {
     font-size: 14px;
     line-height: normal;
+  }
+}
+
+@media (max-width: 1024px) {
+  /*! -- Prices styles----------------------------- */
+
+  .prices .bg-holder {
+    top: -25%;
+  }
+}
+
+@media (max-width: 863px) {
+  /*! -- Prices styles----------------------------- */
+
+  .prices .bg-holder {
+    height: 100%;
+    top: 0;
+  }
+
+  .prices .bg-holder img {
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 }
