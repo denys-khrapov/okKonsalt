@@ -1,0 +1,33 @@
+/*! -- Form styles----------------------------- */
+.form {
+	&__input-holder--phone {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 12px;
+			transform: translateY(-50%);
+			background-image: url('../img/phone.svg');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 14px;
+			height: 14px;
+			z-index: 1;
+		}
+	}
+
+	&__phone-label {
+		color: $graphite-900;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: normal;
+		margin: 0 0 8px 0;
+	}
+
+	&__button-holder {
+		margin: 24px 0 0 0;
+	}
+}

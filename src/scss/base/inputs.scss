@@ -1,0 +1,73 @@
+/*! -- Inputs styles----------------------------- */
+
+input[type="text"],
+input[type="tel"] {
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid $graphite-100;
+	background-color: $colors-background-placeholder;
+	border-radius: 8px;
+	color: $graphite-500;
+	font-size: 14px;
+	line-height: normal;
+	font-weight: 400;
+	padding: 9px 12px 9px 34px;
+	border-radius: 8px;
+	transition: all 0.3s ease 0s;
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: normal;
+	color: $graphite-500;
+}
+
+input[type="text"]:hover,
+input[type="tel"]:hover {
+	background-color: $colors-full-white;
+	border: 1px solid $green-200;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+	outline: none;
+	border-radius: 8px;
+	border: 1px solid $green-source;
+	background-color: $colors-full-white;
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"].disabled,
+input[type="tel"].disabled {
+	pointer-events: none;
+	background-color: $graphite-100;
+	border: none;
+
+	&::placeholder {
+		// color: $dark-200;
+	}
+}
+
+input.novalid {
+	border: 1px solid red !important;
+
+	&:focus {
+		box-shadow: unset;
+	}
+}
+
+
+
+
+@media (max-width: $md1) {
+
+	/*! -- Inputs styles----------------------------- */
+	input[type="text"],
+	input[type="tel"] {
+		padding: 9px 16px 9px 38px;
+	}
+}

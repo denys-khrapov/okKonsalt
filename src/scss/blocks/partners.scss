@@ -1,0 +1,138 @@
+/*! -- Partners styles----------------------------- */
+.partners {
+	padding: 128px 0;
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		column-gap: 124px;
+	}
+
+	&__left-column {
+		width: calc(100% - 576px);
+	}
+
+
+	&__right-column {
+		width: 100%;
+		max-width: 576px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 24px;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: normal;
+		margin: 0 0 81px 0;
+	}
+
+	&__logo {
+		width: calc(33.333% - 16px);
+		min-height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+
+	&__form-holder {
+		background-color: $colors-full-white;
+		display: flex;
+		flex-direction: column;
+		padding: 32px;
+		border-radius: 24px;
+		box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+
+		.btn-full {
+			text-transform: none;
+			padding: 14px;
+			margin-left: auto;
+		}
+
+		h4 {
+			color: $graphite-900;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: normal;
+			margin: 0 0 24px 0;
+		}
+	}
+}
+
+@media (max-width:$md1) {
+
+	/*! -- Partners styles----------------------------- */
+	.partners {
+		padding: 32px 0;
+
+		&__container {
+			max-width: 866px;
+			gap: 24px;
+			flex-wrap: wrap;
+		}
+
+		&__left-column {
+			width: 100%;
+			min-width: 256px;
+			flex: 1;
+		}
+
+		&__title {
+			font-size: 20px;
+			font-weight: 700;
+			margin: 0 0 32px 0;
+		}
+
+		&__right-column {
+			max-width: 100%;
+			width: 100%;
+			min-width: 256px;
+			flex: 1;
+			gap: 0;
+			justify-content: center;
+			align-content: center;
+		}
+
+		&__logo {
+			width: clamp(85px, 25%, 176px);
+			max-height: 75px;
+			min-height: 75px;
+
+			&:last-child {
+				display: none;
+			}
+		}
+
+		&__form-holder {
+			padding: 16px;
+			border-radius: 16px;
+
+			h4 {
+				font-size: 16px;
+				font-weight: 700;
+			}
+
+			.btn-full {
+				width: 100%;
+				padding: 10.5px;
+			}
+		}
+
+		&__image-holder {
+			display: flex;
+			justify-content: center;
+			width: 45px;
+			height: 17px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
