@@ -1,5 +1,6 @@
 /*! -- Buttons styles----------------------------- */
-.btn-full {
+.btn-full,
+.btn-outline {
 	width: fit-content;
 	display: flex;
 	flex-direction: row;
@@ -18,17 +19,13 @@
 	transition: all 0.3s ease 0s;
 	vertical-align: middle;
 	cursor: pointer;
+	user-select: none;
 	border: 2px solid transparent;
 
 	svg {
 		path {
 			transition: all 0.3s ease 0s;
 		}
-	}
-
-	&:hover {
-		border: 2px solid $green-source;
-		background-color: $graphite-800;
 	}
 
 	&:active {
@@ -52,10 +49,91 @@
 	}
 }
 
+
+
+.btn-outline {
+	color: $graphite-900;
+	background-color: transparent;
+	border: 2px solid $green-source;
+
+	&:active {
+		color: $colors-full-white;
+
+		svg {
+			path {
+				fill: $colors-full-white;
+			}
+		}
+	}
+
+	&.blocked {
+		background: rgba(94, 94, 96, 0.15);
+		color: $graphite-500;
+		pointer-events: none;
+		border: 0;
+
+		svg {
+			path {
+				fill: $graphite-500;
+			}
+		}
+	}
+
+	&.blocked:focus {
+		outline: none;
+	}
+}
+
+@media (any-hover: hover) {
+
+	.btn-full {
+		&:hover {
+			border: 2px solid $green-source;
+			background-color: $graphite-800;
+		}
+
+		&:active {
+			background-color: $graphite-900;
+		}
+	}
+
+	.btn-outline {
+		color: $graphite-900;
+		background-color: transparent;
+		border: 2px solid $green-source;
+
+		&:hover {
+			color: $colors-full-white;
+			background-color: $graphite-800;
+
+			svg {
+				path {
+					fill: $colors-full-white;
+				}
+			}
+		}
+
+		&:active {
+			color: $colors-full-white;
+			background-color: $graphite-900;
+
+			svg {
+				path {
+					fill: $colors-full-white;
+				}
+			}
+		}
+	}
+}
+
 @media (max-width:$md1) {
 
 	/*! -- Buttons styles----------------------------- */
 	.btn-full {
 		padding: 12px;
+	}
+
+	.btn-outline {
+		padding: 9px 12px;
 	}
 }

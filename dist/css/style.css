@@ -239,7 +239,7 @@ body.lock {
   color: #39393A;
   font-size: 48px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.3;
 }
 
 .title i {
@@ -252,8 +252,157 @@ body.lock {
   color: #8AB32C;
   font-size: 16px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.3;
   margin: 0 0 8px 0;
+}
+
+/*! -- Accordion styles----------------------------- */
+
+.accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.accordion__wrapper {
+  position: relative;
+}
+
+.accordion__wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #DDDDDD;
+}
+
+.accordion__icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.accordion__icon:before,
+.accordion__icon:after {
+  content: "";
+  position: absolute;
+  background-color: #39393A;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  border-radius: 2px;
+}
+
+.accordion__icon:before {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+}
+
+.accordion__icon:after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.accordion__icon:hover {
+  cursor: pointer;
+}
+
+.accordion__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #39393A;
+  cursor: pointer;
+  padding: 16px 16px 16px 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+  outline: none;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  position: relative;
+}
+
+.accordion__btn svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.accordion__btn.active {
+  color: #8AB32C;
+}
+
+.accordion__btn.active .accordion__icon::before {
+  background-color: #8AB32C;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion__btn.active .accordion__icon::after {
+  background-color: #8AB32C;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.accordion__btn.active + .accordion__text-holder {
+  margin: 0 0 16px 0;
+}
+
+.accordion__text-holder {
+  padding: 0px 16px 0px 16px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion__text-holder ul {
+  color: #5E5E60;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 0 0 0 25px;
+  margin: 15px 0 0 0;
+}
+
+.accordion__text-holder ul li {
+  list-style: disc;
+}
+
+.accordion__text {
+  color: #5E5E60;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 /*! -- Form styles----------------------------- */
@@ -463,7 +612,8 @@ input.novalid:focus {
 
 /*! -- Buttons styles----------------------------- */
 
-.btn-full {
+.btn-full,
+.btn-outline {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -496,34 +646,67 @@ input.novalid:focus {
   transition: all 0.3s ease 0s;
   vertical-align: middle;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border: 2px solid transparent;
 }
 
-.btn-full svg path {
+.btn-full svg path,
+.btn-outline svg path {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
-.btn-full:hover {
-  border: 2px solid #8AB32C;
-  background-color: #4B4B4D;
-}
-
-.btn-full:active {
+.btn-full:active,
+.btn-outline:active {
   background-color: #39393A;
 }
 
-.btn-full.blocked {
+.btn-full.blocked,
+.btn-outline.blocked {
   background: rgba(94, 94, 96, 0.15);
   color: #868688;
   pointer-events: none;
 }
 
-.btn-full.blocked svg path {
+.btn-full.blocked svg path,
+.btn-outline.blocked svg path {
   fill: #868688;
 }
 
-.btn-full.blocked:focus {
+.btn-full.blocked:focus,
+.btn-outline.blocked:focus {
+  outline: none;
+}
+
+.btn-outline {
+  color: #39393A;
+  background-color: transparent;
+  border: 2px solid #8AB32C;
+}
+
+.btn-outline:active {
+  color: #FFFFFF;
+}
+
+.btn-outline:active svg path {
+  fill: #FFFFFF;
+}
+
+.btn-outline.blocked {
+  background: rgba(94, 94, 96, 0.15);
+  color: #868688;
+  pointer-events: none;
+  border: 0;
+}
+
+.btn-outline.blocked svg path {
+  fill: #868688;
+}
+
+.btn-outline.blocked:focus {
   outline: none;
 }
 
@@ -1081,6 +1264,99 @@ input.novalid:focus {
   margin: 0 0 24px 0;
 }
 
+/*! -- FAQ styles----------------------------- */
+
+.faq {
+  position: relative;
+  padding: 300px 0 96px;
+}
+
+.faq .bg-holder {
+  height: 376px;
+  z-index: 2;
+}
+
+.faq .bg-holder img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.faq__container {
+  max-width: 976px;
+}
+
+.faq__accordion-holder {
+  border-radius: 24px;
+  border: 1px solid #DDDDDD;
+  background: #FFFFFF;
+  padding: 64px 48px;
+}
+
+.faq__subtitle {
+  text-align: center;
+}
+
+.faq__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 48px 0;
+}
+
+.faq #more {
+  display: none;
+}
+
+.faq #more.active {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.faq #read-more.btn-outline {
+  margin: 64px auto 0 auto;
+  position: relative;
+}
+
+.faq #read-more.btn-outline.active svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/*! -- FAQ styles----------------------------- */
+
+.faq {
+  padding: 126px 0 48px;
+}
+
+.faq__container.container {
+  max-width: 831px;
+  padding: 0;
+}
+
+.faq .bg-holder {
+  height: 150px;
+}
+
+.faq__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+.faq__accordion-holder {
+  border-radius: 16px;
+  padding: 24px 16px;
+}
+
+.faq #read-more.btn-outline {
+  margin: 30px auto 0 auto;
+}
+
 /*! -- Footer styles----------------------------- */
 
 .footer {
@@ -1246,6 +1522,30 @@ input.novalid:focus {
     font-size: 14px;
   }
 
+  /*! -- Accordion styles----------------------------- */
+
+  .accordion {
+    row-gap: 16px;
+  }
+
+  .accordion__btn {
+    -webkit-column-gap: 32px;
+    -moz-column-gap: 32px;
+    column-gap: 32px;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .accordion__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .accordion__wrapper::after {
+    bottom: -8px;
+  }
+
   /*! -- Inputs styles----------------------------- */
 
   input[type=text],
@@ -1259,6 +1559,10 @@ input.novalid:focus {
 
   .btn-full {
     padding: 12px;
+  }
+
+  .btn-outline {
+    padding: 9px 12px;
   }
 
   /*! -- Badge styles----------------------------- */
@@ -1582,5 +1886,49 @@ input.novalid:focus {
   .prices .bg-holder img {
     -o-object-fit: cover;
     object-fit: cover;
+  }
+}
+
+@media (any-hover: hover) {
+  .accordion__btn:hover {
+    color: #8AB32C;
+  }
+
+  .accordion__btn:hover .accordion__icon:before,
+  .accordion__btn:hover .accordion__icon:after {
+    background-color: #8AB32C;
+  }
+
+  .btn-full:hover {
+    border: 2px solid #8AB32C;
+    background-color: #4B4B4D;
+  }
+
+  .btn-full:active {
+    background-color: #39393A;
+  }
+
+  .btn-outline {
+    color: #39393A;
+    background-color: transparent;
+    border: 2px solid #8AB32C;
+  }
+
+  .btn-outline:hover {
+    color: #FFFFFF;
+    background-color: #4B4B4D;
+  }
+
+  .btn-outline:hover svg path {
+    fill: #FFFFFF;
+  }
+
+  .btn-outline:active {
+    color: #FFFFFF;
+    background-color: #39393A;
+  }
+
+  .btn-outline:active svg path {
+    fill: #FFFFFF;
   }
 }
