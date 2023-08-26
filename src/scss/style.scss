@@ -102,7 +102,12 @@ body {
 }
 
 
-
+#typewriter {
+	color: $graphite-900;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+}
 
 .title {
 	color: $graphite-900;
@@ -129,9 +134,15 @@ body {
 	.subtitle {
 		font-size: 14px;
 	}
+
+	#typewriter {
+		font-size: 14px;
+		line-height: 1.3;
+	}
 }
 
 
+@import "base/rating";
 @import "base/accordion";
 @import "base/form";
 @import "base/inputs";
@@ -142,6 +153,7 @@ body {
 @import "base/badge";
 @import "base/person";
 @import "blocks/header";
+@import "blocks/hero";
 @import "blocks/reasons";
 @import "blocks/prices";
 @import "blocks/partners";

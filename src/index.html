@@ -10,6 +10,104 @@
 		<main class="content">
 
 
+			<!--Hero section -->
+			<section class="hero" id="section-hero">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="@img/hero-bg.webp" type="image/webp">
+						<img src="@img/hero-bg-mob.png" width="1920" height="886" alt="image">
+					</picture>
+				</div>
+				<div class="hero__container container">
+					<div class="hero__left-column">
+						<div class="hero__rating-box">
+							<div class="rating">
+								<div class="rating__image-holder">
+									<img src="@img/star.svg" width="20" height="20" alt="icon">
+								</div>
+								<div class="rating__image-holder">
+									<img src="@img/star.svg" width="20" height="20" alt="icon">
+								</div>
+								<div class="rating__image-holder">
+									<img src="@img/star.svg" width="20" height="20" alt="icon">
+								</div>
+								<div class="rating__image-holder">
+									<img src="@img/star.svg" width="20" height="20" alt="icon">
+								</div>
+								<div class="rating__image-holder">
+									<img src="@img/star.svg" width="20" height="20" alt="icon">
+								</div>
+								<div class="rating__number">
+									4.8
+								</div>
+							</div>
+							<div class="link-reviews">
+								Понад 450 <a href="#">позитивних відгуків</a> від наших клієнтів!
+							</div>
+						</div>
+						<h1 class="hero__title title">Бухгалтерія<br>
+							та фінанси для ведення <span>бізнесу</span>
+						</h1>
+						<div class="person">
+							<h3>Подбайте про глобальні питання вашого бізнесу.</h3>
+							<div class="person__row">
+								<div class="person__left-column">
+									<div class="person__image-holder">
+										<img src="@img/olga-avatar.jpg" width="65" height="65" alt="image">
+									</div>
+								</div>
+								<div class="person__right-column">
+									<h5 class="person__name">Дерев’янко Ольга</h5>
+									<div class="person__text">
+										✅ <span id="typewriter"></span>
+									</div>
+									<div class="person__position">Генеральний директор компанії “OK-Консалт”</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hero__right-column">
+						<div class="hero__image-holder">
+							<img src="@img/hero-img.jpg" width="758" height="758" alt="image">
+						</div>
+						<div class="hero__card card">
+							<div class="card__inner">
+								<div class="hero__form-holder">
+									<h4>Замовляйте
+										консультацію зараз</h4>
+									<div id="note"></div>
+									<form class="form" id="ajax-contact-form" action="" data-form-validate="true">
+										<div class="form__inner">
+											<div class="form__phone-label">Ваш телефон</div>
+											<div class="form__input-holder form__input-holder--phone">
+												<span>
+													<input type="tel" value="" name="phone-client"
+														placeholder="+38 (ХХХ) ХХХ - ХХ - ХХ" required />
+												</span>
+											</div>
+											<input type="hidden" name="url">
+											<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+											<div class="form__button-holder">
+												<button class="btn-full" type="submit">
+													Замовити
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M14.5813 10.3313L8.33128 16.5813C8.24242 16.6641 8.12489 16.7092 8.00345 16.707C7.88201 16.7049 7.76615 16.6557 7.68026 16.5698C7.59438 16.4839 7.54518 16.368 7.54304 16.2466C7.5409 16.1252 7.58598 16.0076 7.66878 15.9188L13.5867 10L7.66878 4.08128C7.58598 3.99242 7.5409 3.87489 7.54304 3.75345C7.54518 3.63201 7.59438 3.51615 7.68026 3.43026C7.76615 3.34438 7.88201 3.29518 8.00345 3.29304C8.12489 3.2909 8.24242 3.33598 8.33128 3.41878L14.5813 9.66878C14.6691 9.75667 14.7184 9.87581 14.7184 10C14.7184 10.1242 14.6691 10.2434 14.5813 10.3313Z"
+															fill="#F8F8FA" />
+													</svg>
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
 
 			<!--Reasons section -->
 			<section class="reasons" id="section-reasons">
@@ -46,19 +144,21 @@
 							</div>
 						</div>
 						<div class="reasons__card reasons__card--person">
-							<h3>Наша професійна компетенція для вашого бізнесу!</h3>
 							<div class="person">
-								<div class="person__left-column">
-									<div class="image-holder">
-										<img src="@img/reasons-avatar.jpg" width="65" height="65" alt="image">
+								<h3>Наша професійна компетенція для вашого бізнесу!</h3>
+								<div class="person__row">
+									<div class="person__left-column">
+										<div class="person__image-holder">
+											<img src="@img/irina-avatar.jpg" width="65" height="65" alt="image">
+										</div>
 									</div>
-								</div>
-								<div class="person__right-column">
-									<h5 class="person__name">Бречко Ірина</h5>
-									<div class="person__text">
-										"Ми – майстри своєї справи, які створюють успіх для наших клієнтів!"
+									<div class="person__right-column">
+										<h5 class="person__name">Бречко Ірина</h5>
+										<div class="person__text">
+											"Ми – майстри своєї справи, які створюють успіх для наших клієнтів!"
+										</div>
+										<div class="person__position">Начальник відділу оподаткування ФОП</div>
 									</div>
-									<div class="person__position">Начальник відділу оподаткування ФОП</div>
 								</div>
 							</div>
 						</div>

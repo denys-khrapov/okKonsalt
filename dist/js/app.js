@@ -1,7 +1,9 @@
 jQuery(document).ready(function ($) {
    testWebPFunction();
    initAccordion();
+   // initAccordionHover();
    initReadMore();
+   initTypeWriter();
 });
 
 function testWebPFunction() {
@@ -42,6 +44,32 @@ function initAccordion() {
    }
 }
 
+// function initAccordionHover() {
+//    let acc = document.getElementsByClassName("accordion__btn");
+//    let isHoverEnabled = window.innerWidth >= 1280 && window.innerWidth <= 1920; // Check window width
+
+//    for (let i = 0; i < acc.length; i++) {
+//       acc[i].addEventListener(
+//          isHoverEnabled ? "mouseover" : "click",
+//          function () {
+//             let isActive = this.classList.contains("active");
+
+//             for (let j = 0; j < acc.length; j++) {
+//                acc[j].classList.remove("active");
+//                let panel = acc[j].nextElementSibling;
+//                panel.style.maxHeight = null;
+//             }
+
+//             if (!isActive) {
+//                this.classList.add("active");
+//                let panel = this.nextElementSibling;
+//                panel.style.maxHeight = panel.scrollHeight + "px";
+//             }
+//          }
+//       );
+//    }
+// }
+
 function initReadMore() {
    var moreText = document.getElementById("more");
    var readMoreBtn = document.getElementById("read-more");
@@ -55,4 +83,23 @@ function initReadMore() {
       this.classList.toggle("active");
       readMoreText.textContent = isExpanded ? "ЗГОРНУТИ" : "ПОКАЗАТИ ЩЕ";
    });
+}
+
+function initTypeWriter() {
+   let tagForPrint = document.getElementById("typewriter");
+   let phrase = "Бухгалтерію та фінанси ми беремо на себе!";
+   let printIterator = 0;
+
+   const newInterval = setInterval(() => {
+      tagForPrint.textContent += phrase[printIterator];
+      printIterator++;
+      if (printIterator === phrase.length) {
+         clearInterval(newInterval);
+         setTimeout(() => {
+            tagForPrint.textContent = "";
+            printIterator = 0;
+            initTypeWriter();
+         }, 5000);
+      }
+   }, 100);
 }
