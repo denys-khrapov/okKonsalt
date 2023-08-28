@@ -298,21 +298,17 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 32px 0 0 0;
+  margin: 32px auto 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.swiper-button-next,
-.swiper-button-prev,
-.swiper-pagination {
+.button-prev-about,
+.button-prev-team,
+.button-next-about,
+.button-next-team {
   position: static;
-}
-
-.swiper-pagination {
-  width: auto !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
   height: 52px;
   width: 52px;
   display: -webkit-box;
@@ -333,49 +329,67 @@ body.lock {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 
-.swiper-button-next svg,
-.swiper-button-prev svg {
+.button-prev-about svg,
+.button-prev-team svg,
+.button-next-about svg,
+.button-next-team svg {
   width: 20px;
   height: 20px;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-.swiper-button-next svg path,
-.swiper-button-prev svg path {
+.button-prev-about svg path,
+.button-prev-team svg path,
+.button-next-about svg path,
+.button-next-team svg path {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.button-prev-about::after,
+.button-prev-team::after,
+.button-next-about::after,
+.button-next-team::after {
   display: none;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.button-prev-about:hover,
+.button-prev-team:hover,
+.button-next-about:hover,
+.button-next-team:hover {
   background-color: #4B4B4D;
 }
 
-.swiper-button-next:active,
-.swiper-button-prev:active {
+.button-prev-about:active,
+.button-prev-team:active,
+.button-next-about:active,
+.button-next-team:active {
   background-color: #39393A;
 }
 
-.swiper-button-next:active svg path,
-.swiper-button-prev:active svg path {
+.button-prev-about:active svg path,
+.button-prev-team:active svg path,
+.button-next-about:active svg path,
+.button-next-team:active svg path {
   fill: #FFFFFF;
 }
 
-.swiper-button-disabled {
+.button-prev-about.swiper-button-disabled,
+.button-prev-team.swiper-button-disabled,
+.button-next-about.swiper-button-disabled,
+.button-next-team.swiper-button-disabled {
   opacity: 1 !important;
   border: 2px solid transparent;
   background-color: rgba(94, 94, 96, 0.15);
+  pointer-events: none;
 }
 
-.swiper-pagination {
+.pagination-about,
+.pagination-team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,18 +399,19 @@ body.lock {
   -webkit-column-gap: 8px;
   -moz-column-gap: 8px;
   column-gap: 8px;
+  width: auto !important;
 }
 
-.swiper-pagination-bullet {
+.pagination-about .swiper-pagination-bullet,
+.pagination-team .swiper-pagination-bullet {
   border-radius: 7px;
   margin: 0 !important;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   width: 12px;
   height: 12px;
 }
 
-.swiper-pagination-bullet-active {
+.pagination-about .swiper-pagination-bullet-active,
+.pagination-team .swiper-pagination-bullet-active {
   width: 122px;
   background-color: #8AB32C;
 }
@@ -471,6 +486,15 @@ body.lock {
   display: inline-block;
   color: #5E5E60;
   padding: 0 17px;
+}
+
+/*! -- Chat styles----------------------------- */
+
+.chat {
+  color: #39393A;
+  padding: 16px;
+  border-radius: 0px 20px 20px 20px;
+  background: #FFFFFF;
 }
 
 /*! -- Promo styles----------------------------- */
@@ -1299,7 +1323,7 @@ input.novalid:focus {
   font-size: 14px;
   font-weight: 700;
   color: #39393A;
-  line-height: 1.4;
+  line-height: 1.3;
   margin: 0 0 8px 0;
 }
 
@@ -1313,6 +1337,7 @@ input.novalid:focus {
 
 .person__position {
   font-size: 14px;
+  line-height: 1.3;
   color: #5E5E60;
 }
 
@@ -1830,6 +1855,37 @@ input.novalid:focus {
   right: 16px;
 }
 
+/*! -- Team styles----------------------------- */
+
+.team {
+  padding: 128px 0;
+  position: relative;
+}
+
+.team__header {
+  margin: 0 0 64px 0;
+}
+
+.team .person + .chat {
+  margin: 8px 0 0 0;
+}
+
+.team__image-holder {
+  margin: 0 0 16px 0;
+}
+
+.team__image-holder img {
+  border-radius: 24px;
+}
+
+.team .swiper-slide {
+  max-width: 276px;
+}
+
+.team .chat + .team__image-holder {
+  margin: 16px 0 16px 0;
+}
+
 /*! -- Partners styles----------------------------- */
 
 .partners {
@@ -2146,9 +2202,41 @@ input.novalid:focus {
     font-size: 14px;
   }
 
+  .title {
+    font-size: 24px;
+  }
+
   #typewriter {
     font-size: 14px;
     line-height: 1.3;
+  }
+
+  /*! -- Swiper styles----------------------------- */
+
+  .button-prev-about,
+  .button-prev-team,
+  .button-next-about,
+  .button-next-team {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pagination-about,
+  .pagination-team {
+    -webkit-column-gap: 6px;
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+  }
+
+  .pagination-about .swiper-pagination-bullet,
+  .pagination-team .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
+  .pagination-about .swiper-pagination-bullet-active,
+  .pagination-team .swiper-pagination-bullet-active {
+    width: 56px;
   }
 
   /*! -- Arguments styles----------------------------- */
@@ -2160,6 +2248,14 @@ input.novalid:focus {
   .arguments span {
     font-size: 12px;
     padding: 0 8px;
+  }
+
+  /*! -- Chat styles----------------------------- */
+
+  .chat {
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.3;
   }
 
   /*! -- Promo styles----------------------------- */
@@ -2702,6 +2798,44 @@ input.novalid:focus {
     top: 24px;
   }
 
+  /*! -- Team styles----------------------------- */
+
+  .team {
+    padding: 64px 0;
+  }
+
+  .team__header {
+    margin: 0 0 32px 0;
+  }
+
+  .team .bg-holder {
+    top: -20%;
+    height: auto;
+  }
+
+  .team .bg-holder img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 0 0;
+    object-position: 0 0;
+  }
+
+  .team__image-holder img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .team .swiper-slide {
+    max-width: 256px;
+  }
+
+  .team .swiper-slide:nth-child(even) .chat {
+    border-radius: 20px 20px 20px 0px;
+  }
+
   /*! -- Partners styles----------------------------- */
 
   .partners {
@@ -2939,6 +3073,12 @@ input.novalid:focus {
   /*! -- Hero styles----------------------------- */
 
   .hero .bg-holder {
+    height: 100%;
+  }
+
+  /*! -- Team styles----------------------------- */
+
+  .team .bg-holder {
     height: 100%;
   }
 }

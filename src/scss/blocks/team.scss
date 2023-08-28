@@ -1,0 +1,89 @@
+/*! -- Team styles----------------------------- */
+.team {
+	padding: 128px 0;
+	position: relative;
+
+	&__header {
+		margin: 0 0 64px 0;
+	}
+
+	.person {
+		&+.chat {
+			margin: 8px 0 0 0;
+		}
+	}
+
+	&__image-holder {
+		margin: 0 0 16px 0;
+
+		img {
+			border-radius: 24px;
+		}
+	}
+
+	.swiper {
+		&-slide {
+			max-width: 276px;
+		}
+	}
+
+	.chat {
+		&+.team__image-holder {
+			margin: 16px 0 16px 0;
+		}
+	}
+}
+
+@media (max-width:$md1) {
+
+	/*! -- Team styles----------------------------- */
+	.team {
+		padding: 64px 0;
+
+		&__header {
+			margin: 0 0 32px 0;
+		}
+
+		.bg-holder {
+			top: -20%;
+			height: auto;
+
+			img {
+				object-fit: cover;
+				object-position: 0 0;
+			}
+		}
+
+		&__image-holder {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 16px;
+			}
+		}
+
+		.swiper {
+			&-slide {
+				max-width: 256px;
+
+				&:nth-child(even) {
+					.chat {
+						border-radius: 20px 20px 20px 0px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width:$md3) {
+
+	/*! -- Team styles----------------------------- */
+	.team {
+		.bg-holder {
+			height: 100%;
+		}
+	}
+}

@@ -106,30 +106,45 @@ function initTypeWriter() {
 }
 
 function initSwiper() {
+   let swiperTeam = new Swiper(".team-slider", {
+      navigation: {
+         nextEl: ".button-next-team",
+         prevEl: ".button-prev-team",
+      },
+      pagination: {
+         el: ".pagination-team",
+         clickable: true,
+      },
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      loop: false,
+      breakpoints: {
+         1280: {
+            spaceBetween: 24,
+         },
+      },
+   });
+
    function initializeSwiper() {
       if (window.innerWidth >= 1280) {
          return new Swiper(".about-slider", {
             navigation: {
-               nextEl: ".swiper-button-next",
-               prevEl: ".swiper-button-prev",
+               nextEl: ".button-next-about",
+               prevEl: ".button-prev-about",
             },
             pagination: {
-               el: ".swiper-pagination",
+               el: ".pagination-about",
                clickable: true,
             },
             slidesPerView: "auto",
             spaceBetween: 24,
             loop: false,
-            breakpoints: {
-               1000: {},
-            },
          });
       } else {
          return null;
       }
    }
    let swiperAbout = initializeSwiper();
-
    window.addEventListener("resize", () => {
       if (swiperAbout) {
          swiperAbout.destroy();
