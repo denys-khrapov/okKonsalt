@@ -263,6 +263,85 @@ body.lock {
   margin: 0 0 8px 0;
 }
 
+/*! -- Promo styles----------------------------- */
+
+.promo {
+  position: relative;
+  background-color: #8AB32C;
+  width: 100%;
+  max-width: 376px;
+  padding: 32px 32px 50px 32px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.promo__image-holder {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.promo__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 48px;
+}
+
+.promo h3 {
+  color: #F3F3F4;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.promo p {
+  color: #F3F3F4;
+  margin: 0;
+  max-width: 176px;
+  width: 100%;
+}
+
+.promo .btn-full {
+  width: 100%;
+  max-width: 228px;
+  background-color: #FFFFFF;
+  color: #39393A;
+}
+
+.promo .btn-full:active {
+  color: #FFFFFF;
+  border: 2px solid #8AB32C;
+}
+
+.promo .btn-full:active svg path {
+  fill: #FFFFFF;
+}
+
+.promo__content {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 48px;
+}
+
+.promo__decor-holder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 /*! -- Rating styles----------------------------- */
 
 .rating {
@@ -479,7 +558,29 @@ body.lock {
   z-index: 1;
 }
 
-.form__phone-label {
+.form__input-holder--user {
+  position: relative;
+}
+
+.form__input-holder--user::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("../img/user.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  z-index: 1;
+}
+
+.form__phone-label,
+.form__name-label {
   color: #39393A;
   font-size: 14px;
   font-weight: 400;
@@ -690,7 +791,7 @@ input.novalid:focus {
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  padding: 13.5px;
+  padding: 13.5px 16px;
   background-color: #8AB32C;
   border-radius: 16px;
   -webkit-transition: all 0.3s ease 0s;
@@ -1217,6 +1318,127 @@ input.novalid:focus {
   font-weight: 400;
 }
 
+/*! -- CTA styles----------------------------- */
+
+.cta {
+  position: relative;
+  padding: 128px 0;
+}
+
+.cta__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 64px;
+}
+
+.cta .bg-video {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: clamp(500px, 39%, 1200px);
+  height: 788px;
+  z-index: 2;
+  opacity: 0.75;
+}
+
+.cta .bg-video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(138, 179, 44, 0.35)), to(rgba(138, 179, 44, 0.35)));
+  background: linear-gradient(0deg, rgba(138, 179, 44, 0.35) 0%, rgba(138, 179, 44, 0.35) 100%);
+  border-radius: 24px 0px 0px 24px;
+}
+
+.cta .bg-video video {
+  border-radius: 24px 0px 0px 24px;
+  height: 100%;
+}
+
+.cta__title {
+  width: 100%;
+  max-width: 533px;
+}
+
+.cta__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+}
+
+.cta__form-holder h4 {
+  color: #39393A;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 48px 0;
+}
+
+.cta__form-holder p {
+  color: #39393A;
+  margin: 0 0 48px 0;
+}
+
+.cta__form-holder .btn-full {
+  margin-left: auto;
+}
+
+.cta .form__input-holder {
+  margin: 0 0 16px 0;
+}
+
+.cta .form input[type=text],
+.cta .form input[type=tel] {
+  padding: 13.5px 12px 13.5px 34px;
+}
+
+.cta .form__phone-label,
+.cta .form__name-label {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cta .card {
+  position: relative;
+  height: 100%;
+  max-width: 476px;
+}
+
+.cta .card__inner {
+  padding: 48px 32px;
+}
+
+.cta .badge {
+  position: absolute;
+}
+
+.cta .badge--orange {
+  top: 16px;
+  right: 16px;
+}
+
+.cta__column--video {
+  display: none;
+}
+
 /*! -- Prices styles----------------------------- */
 
 .prices {
@@ -1689,6 +1911,52 @@ input.novalid:focus {
     line-height: 1.3;
   }
 
+  /*! -- Promo styles----------------------------- */
+
+  .promo {
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .promo__logo-holder {
+    position: relative;
+    z-index: 2;
+  }
+
+  .promo__content {
+    row-gap: 24px;
+  }
+
+  .promo__inner {
+    row-gap: 24px;
+  }
+
+  .promo h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 240px;
+  }
+
+  .promo p {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .promo .btn-full {
+    max-width: 100%;
+  }
+
+  .promo__image-holder {
+    height: 287px;
+  }
+
+  .promo__image-holder img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   /*! -- Accordion styles----------------------------- */
 
   .accordion {
@@ -1722,7 +1990,7 @@ input.novalid:focus {
   /*! -- Buttons styles----------------------------- */
 
   .btn-full {
-    padding: 12px;
+    padding: 9.5px 12px;
   }
 
   .btn-outline {
@@ -1858,7 +2126,7 @@ input.novalid:focus {
   .hero .person__text {
     min-width: auto;
     width: 100%;
-    max-width: 285px;
+    max-width: 230px;
     min-height: 61px;
   }
 
@@ -1893,6 +2161,124 @@ input.novalid:focus {
 
   .reasons__image-holder {
     height: 376px;
+  }
+
+  /*! -- CTA styles----------------------------- */
+
+  .cta {
+    padding: 64px 0;
+  }
+
+  .cta .bg-video {
+    display: none;
+  }
+
+  .cta .badge--orange {
+    top: 8px;
+    right: 8px;
+  }
+
+  .cta .bg-holder {
+    min-height: 1000px;
+  }
+
+  .cta .bg-holder img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 0 0;
+    object-position: 0 0;
+  }
+
+  .cta__title {
+    font-size: 24px;
+    max-width: 300px;
+  }
+
+  .cta__row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    row-gap: 24px;
+  }
+
+  .cta__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 33.333%;
+    min-width: 256px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .cta__column--video {
+    display: block;
+    position: relative;
+    height: 389px;
+  }
+
+  .cta__column--video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(138, 179, 44, 0.35)), to(rgba(138, 179, 44, 0.35)));
+    background: linear-gradient(0deg, rgba(138, 179, 44, 0.35) 0%, rgba(138, 179, 44, 0.35) 100%);
+    border-radius: 16px;
+  }
+
+  .cta__column--video video {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 0.75;
+  }
+
+  .cta .promo {
+    max-width: 389px;
+  }
+
+  .cta .card {
+    height: auto;
+    max-width: 389px;
+  }
+
+  .cta .card__inner {
+    padding: 24px 16px;
+  }
+
+  .cta__form-holder h4 {
+    font-size: 16px;
+    max-width: 100px;
+    margin: 0 0 24px 0;
+  }
+
+  .cta__form-holder p {
+    font-size: 14px;
+    margin: 0 0 24px 0;
+    line-height: 1.3;
+  }
+
+  .cta .form__input-holder {
+    margin: 0 0 8px 0;
+  }
+
+  .cta .form__phone-label,
+  .cta .form__name-label {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .cta .form input[type=text],
+  .cta .form input[type=tel] {
+    padding: 8.5px 12px 8.5px 34px;
   }
 
   /*! -- Prices styles----------------------------- */
@@ -2217,6 +2603,14 @@ input.novalid:focus {
 }
 
 @media (any-hover: hover) {
+  .promo .btn-full:hover {
+    color: #FFFFFF;
+  }
+
+  .promo .btn-full:hover svg path {
+    fill: #FFFFFF;
+  }
+
   .accordion__btn:hover {
     color: #8AB32C;
   }

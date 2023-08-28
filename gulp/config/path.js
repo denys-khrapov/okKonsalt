@@ -8,6 +8,7 @@ const srcFolder = `./src`;
 export const path = {
    build: {
       php: `${buildFolder}/`,
+      video: `${buildFolder}/video/`,
       pdf: `${buildFolder}/`,
       js: `${buildFolder}/js/`,
       cssStylePlugins: `${buildFolder}/css/`,
@@ -19,6 +20,7 @@ export const path = {
    },
    src: {
       php: `${srcFolder}/php/**/*.php`,
+      video: `${srcFolder}/video/**/*.*`,
       pdf: `${srcFolder}/pdf/**/*.pdf`,
       js: `${srcFolder}/js/**/*.js`,
       cssStylePlugins: `${srcFolder}/scss/*.css`,
@@ -31,6 +33,7 @@ export const path = {
    },
    watch: {
       php: `${srcFolder}/php/**/*.php`,
+      video: `${srcFolder}/video/**/*.*`,
       pdf: `${srcFolder}/pdf/**/*.pdf`,
       js: `${srcFolder}/js/**/*.js`,
       cssStylePlugins: `${srcFolder}/scss/*.css`,

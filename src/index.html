@@ -270,6 +270,112 @@
 				</div>
 			</section>
 
+			<!-- CTA section -->
+			<section class="cta" id="section-cta">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="@img/cta-bg.webp" type="image/webp">
+						<img src="@img/cta-bg-mob.png" width="1920" height="994" alt="image">
+					</picture>
+				</div>
+				<div class="cta__container container">
+					<div class="cta__header">
+						<h3 class="cta__subtitle subtitle">ЗАМОВЛЕННЯ ІНДИВІДУАЛЬНОГО РОЗРАХУНКУ</h3>
+						<h2 class="cta__title title">Замовте розрахунок
+							прямо зараз!</h2>
+					</div>
+					<div class="cta__row">
+						<div class="cta__column">
+							<div class="promo">
+								<div class="promo__inner">
+									<div class="promo__logo-holder">
+										<img src="@img/logo-promo.svg" width="127" height="30" alt="logo">
+									</div>
+									<div class="promo__image-holder">
+										<picture>
+											<source media="(min-width:1280px)" srcset="@img/promo-img.webp" type="image/webp">
+											<img src="@img/promo-img-mob.png" width="242" height="442" alt="image">
+										</picture>
+									</div>
+
+									<div class="promo__decor-holder">
+										<img src="@img/promo-decor.png" width="376" height="521" alt="image">
+									</div>
+									<div class="promo__content">
+										<h3>КОМПЛЕКСНИЙ БУХГАЛТЕРСЬКИЙ СУПРОВІД</h3>
+										<p>Для отримання індивідуального розрахунку, дайте відповідь на декілька питань</p>
+										<a class="btn-full" href="#">
+											РОЗПОЧАТИ ЗАРАЗ
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.0813 10.3314L7.83128 16.5814C7.74242 16.6642 7.62489 16.7093 7.50345 16.7071C7.38201 16.705 7.26615 16.6558 7.18026 16.5699C7.09438 16.484 7.04518 16.3682 7.04304 16.2467C7.0409 16.1253 7.08598 16.0078 7.16878 15.9189L13.0867 10.0001L7.16878 4.0814C7.08598 3.99254 7.0409 3.87501 7.04304 3.75357C7.04518 3.63213 7.09438 3.51627 7.18026 3.43038C7.26615 3.3445 7.38201 3.29531 7.50345 3.29316C7.62489 3.29102 7.74242 3.3361 7.83128 3.4189L14.0813 9.6689C14.1691 9.75679 14.2184 9.87593 14.2184 10.0001C14.2184 10.1244 14.1691 10.2435 14.0813 10.3314Z"
+													fill="#39393A" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cta__column">
+							<div class="cta__card card">
+								<div class="card__inner">
+									<div class="badge badge--orange">
+										<h5>Знижка 10%</h5>
+										<span>на контракт від 3 місяців!</span>
+										<div class="badge__svg-holder">
+											<img src="@img/fire.svg" width="82" height="83" alt="icon">
+										</div>
+									</div>
+									<div class="cta__form-holder">
+										<h4>ШВИДКА ЗАЯВКА</h4>
+										<p>Залишіть свій телефон і ми зв'яжемося з вами та обговоримо всі деталі співпраці!</p>
+										<div id="note"></div>
+										<form class="form" id="ajax-contact-form" action="" data-form-validate="true">
+											<div class="form__inner">
+												<div class="form__name-label">Ваше ім'я</div>
+												<div class="form__input-holder form__input-holder--user">
+													<span>
+														<input type="text" value="" name="name-client"
+															placeholder="Наприклад: Григорій Сковорода" required />
+													</span>
+												</div>
+												<div class="form__phone-label">Ваш телефон</div>
+												<div class="form__input-holder form__input-holder--phone">
+													<span>
+														<input type="tel" value="" name="phone-client"
+															placeholder="+38 (ХХХ) ХХХ - ХХ - ХХ" required />
+													</span>
+												</div>
+												<input type="hidden" name="url">
+												<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+												<div class="form__button-holder">
+													<button class="btn-full" type="submit">
+														ЗАМОВИТИ КОНСУЛЬТАЦІЮ
+													</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cta__column cta__column--video">
+							<video autoplay muted loop preload="auto" playsinline class="timeline__video">
+								<source type="video/webm" src="video/timeline-video.webm">
+								<source type="video/mp4" src="video/timeline-video.mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+				<div class="bg-video">
+					<video autoplay muted loop preload="auto" playsinline class="timeline__video">
+						<source type="video/webm" src="video/timeline-video.webm">
+						<source type="video/mp4" src="video/timeline-video.mp4">
+					</video>
+				</div>
+			</section>
+
 			<!-- Prices section -->
 			<section class="prices" id="section-partners">
 				<div class="bg-holder">
