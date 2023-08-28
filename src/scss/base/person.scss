@@ -29,6 +29,10 @@
 		column-gap: 12px;
 	}
 
+	&__left-column {
+		flex-shrink: 0;
+	}
+
 	&__name {
 		font-size: 14px;
 		font-weight: 700;
