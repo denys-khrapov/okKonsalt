@@ -52,6 +52,8 @@ body {
 	opacity: 0.75;
 	mix-blend-mode: overlay;
 	z-index: 2;
+	user-select: none;
+	pointer-events: none;
 }
 
 .bg-holder {
@@ -61,6 +63,8 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
+	user-select: none;
+	pointer-events: none;
 
 	img {
 		width: 100%;
@@ -142,6 +146,8 @@ body {
 }
 
 
+@import "base/swiper";
+@import "base/arguments";
 @import "base/promo";
 @import "base/rating";
 @import "base/accordion";
@@ -157,6 +163,7 @@ body {
 @import "blocks/hero";
 @import "blocks/reasons";
 @import "blocks/cta";
+@import "blocks/about";
 @import "blocks/prices";
 @import "blocks/partners";
 @import "blocks/faq";

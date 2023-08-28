@@ -4,6 +4,7 @@ jQuery(document).ready(function ($) {
    // initAccordionHover();
    initReadMore();
    initTypeWriter();
+   initSwiper();
 });
 
 function testWebPFunction() {
@@ -102,4 +103,37 @@ function initTypeWriter() {
          }, 5000);
       }
    }, 100);
+}
+
+function initSwiper() {
+   function initializeSwiper() {
+      if (window.innerWidth >= 1280) {
+         return new Swiper(".about-slider", {
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+               el: ".swiper-pagination",
+               clickable: true,
+            },
+            slidesPerView: "auto",
+            spaceBetween: 24,
+            loop: false,
+            breakpoints: {
+               1000: {},
+            },
+         });
+      } else {
+         return null;
+      }
+   }
+   let swiperAbout = initializeSwiper();
+
+   window.addEventListener("resize", () => {
+      if (swiperAbout) {
+         swiperAbout.destroy();
+      }
+      swiperAbout = initializeSwiper();
+   });
 }

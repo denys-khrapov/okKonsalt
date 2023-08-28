@@ -43,4 +43,12 @@
 	}
 }
 
-@media (max-width:$md1) {}
+@media (max-width:$md1) {
+
+	/*! -- Cards styles----------------------------- */
+	.card {
+		&__inner {
+			padding: 24px;
+		}
+	}
+}
