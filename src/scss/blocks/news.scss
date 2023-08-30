@@ -1,0 +1,151 @@
+/*! -- News styles----------------------------- */
+.news {
+	padding: 128px 0;
+	position: relative;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 64px;
+	}
+
+	&__header {
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 600;
+	}
+
+	.btn-outline {
+		margin: 64px auto 0 auto;
+	}
+
+	.card {
+		&__inner {
+			padding: 24px 24px 32px;
+			justify-content: flex-start;
+			row-gap: 24px;
+		}
+
+		h4 {
+			text-transform: uppercase;
+			color: $graphite-900;
+			font-size: 24px;
+			line-height: 1.3;
+		}
+
+		h5 {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			align-self: stretch;
+			overflow: hidden;
+			color: $graphite-900;
+			text-overflow: ellipsis;
+			font-size: 18px;
+			font-weight: 400;
+		}
+
+		p {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			align-self: stretch;
+			overflow: hidden;
+			color: $graphite-700;
+			text-overflow: ellipsis;
+			font-weight: 300;
+			margin: 0;
+		}
+
+	}
+
+	.cases,
+	.articles {
+		&-slide {
+			&__image-holder {
+				img {
+					border-radius: 8px;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			&__text-holder {
+
+				display: flex;
+				flex-direction: column;
+				row-gap: 8px;
+			}
+		}
+	}
+
+}
+
+
+
+
+@media (max-width:$md1) {
+
+	/*! -- News styles----------------------------- */
+	.news {
+		padding: 64px 0;
+
+		&__container {
+			max-width: 866px;
+			row-gap: 32px;
+		}
+
+		&__title {
+			font-size: 20px;
+			font-weight: 700;
+		}
+
+		.btn-outline {
+			margin: 32px auto 0 auto;
+		}
+
+		.card {
+			max-width: 256px;
+			border-radius: 8px;
+
+			h4 {
+				font-size: 16px;
+				line-height: 1.5;
+			}
+
+			h5 {
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 1.3;
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 1.3;
+			}
+
+			&__inner {
+				row-gap: 16px;
+				padding: 24px 16px 16px;
+			}
+		}
+
+		.cases,
+		.articles {
+			&-slide {
+				&__image-holder {
+					height: 100px;
+
+					img {
+						border-radius: 4px;
+					}
+				}
+			}
+
+		}
+	}
+}

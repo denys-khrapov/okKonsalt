@@ -150,6 +150,7 @@ body {
 }
 
 
+@import "base/tabs";
 @import "base/swiper";
 @import "base/arguments";
 @import "base/chat";
@@ -172,5 +173,6 @@ body {
 @import "blocks/prices";
 @import "blocks/team";
 @import "blocks/partners";
+@import "blocks/news";
 @import "blocks/faq";
 @import "blocks/footer";

@@ -5,6 +5,7 @@ jQuery(document).ready(function ($) {
    initReadMore();
    initTypeWriter();
    initSwiper();
+   initTabs();
 });
 
 function testWebPFunction() {
@@ -125,6 +126,44 @@ function initSwiper() {
       },
    });
 
+   let swiperCases = new Swiper(".cases-slider", {
+      navigation: {
+         nextEl: ".button-next-cases",
+         prevEl: ".button-prev-cases",
+      },
+      pagination: {
+         el: ".pagination-cases",
+         clickable: true,
+      },
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      loop: false,
+      breakpoints: {
+         1280: {
+            spaceBetween: 24,
+         },
+      },
+   });
+
+   let swiperArticles = new Swiper(".articles-slider", {
+      navigation: {
+         nextEl: ".button-next-articles",
+         prevEl: ".button-prev-articles",
+      },
+      pagination: {
+         el: ".pagination-articles",
+         clickable: true,
+      },
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      loop: false,
+      breakpoints: {
+         1280: {
+            spaceBetween: 24,
+         },
+      },
+   });
+
    function initializeSwiper() {
       if (window.innerWidth >= 1280) {
          return new Swiper(".about-slider", {
@@ -150,5 +189,45 @@ function initSwiper() {
          swiperAbout.destroy();
       }
       swiperAbout = initializeSwiper();
+   });
+}
+
+function initTabs() {
+   const tabsBtns = Array.from(document.querySelectorAll("[data-tab-id]"));
+   const tabs = Array.from(document.querySelectorAll("[data-tab]"));
+
+   let selectedTab = tabsBtns[0].dataset.tabId;
+
+   const hideTabs = () => {
+      tabs
+         .filter((tab) => tab.dataset.tab !== selectedTab)
+         .forEach((tab) => {
+            tab.classList.add("tabs__tab--hide");
+         });
+
+      tabsBtns
+         .filter((tab) => tab.dataset.tabId !== selectedTab)
+         .forEach((tab) => {
+            tab.classList.add("tabs__tab-btn--not-selected");
+         });
+   };
+   hideTabs();
+
+   const handleSelectTab = (e) => {
+      selectedTab = e.target.dataset.tabId;
+
+      tabs.forEach((tab) => {
+         tab.classList.remove("tabs__tab--hide");
+      });
+
+      tabsBtns.forEach((tab) => {
+         tab.classList.remove("tabs__tab-btn--not-selected");
+      });
+
+      hideTabs();
+   };
+
+   tabsBtns.forEach((btn) => {
+      btn.addEventListener("click", handleSelectTab);
    });
 }

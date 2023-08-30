@@ -1,0 +1,131 @@
+/*! -- Tabs styles----------------------------- */
+
+.tabs {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	column-gap: 32px;
+	align-items: center;
+
+	&__btn {
+		display: flex;
+		flex-direction: row;
+		column-gap: 8px;
+		align-items: center;
+		width: fit-content;
+		padding: 13px 16px;
+		cursor: pointer;
+		background-color: $graphite-900;
+		border-radius: 16px;
+		border: 2px solid $green-source;
+		color: $colors-full-white;
+		transition: all 0.3s ease 0s;
+
+		&.blocked {
+			background: rgba(94, 94, 96, 0.15);
+			color: $graphite-500;
+			pointer-events: none;
+
+			svg {
+				path {
+					fill: $graphite-500;
+				}
+			}
+		}
+
+		&.blocked:focus {
+			outline: none;
+		}
+
+
+		svg {
+			path {
+				transition: all 0.3s ease 0s;
+				fill: $colors-full-white;
+			}
+		}
+
+		&:hover {
+			background-color: $graphite-800;
+			border: 2px solid $green-source;
+			color: $colors-full-white;
+
+			svg {
+				path {
+					fill: $colors-full-white;
+				}
+			}
+		}
+
+		&:active {
+			background-color: $graphite-900;
+			border: 2px solid $green-source;
+			color: $colors-full-white;
+
+			svg {
+				path {
+					fill: $colors-full-white;
+				}
+			}
+		}
+	}
+}
+
+
+.tabs__tab-btn--not-selected {
+	background-color: $colors-full-white;
+	border: 2px solid transparent;
+	color: $graphite-900;
+
+	svg {
+		path {
+			fill: $graphite-900;
+		}
+	}
+}
+
+
+.tabs__tab--hide {
+	display: none;
+}
+
+.tabs__tab--show {
+	display: block;
+}
+
+.tabs__tab {
+	animation: tabApear 1s;
+}
+
+@keyframes tabApear {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+@media (max-width:$md1) {
+
+	/*! -- Tabs styles----------------------------- */
+
+	.tabs {
+		flex-wrap: wrap;
+		gap: 16px;
+
+		&__btn {
+			padding: 10px 12px;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.3;
+
+			svg {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+}
