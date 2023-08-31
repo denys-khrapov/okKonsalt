@@ -2,10 +2,26 @@
 
 .tabs {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
-	column-gap: 32px;
+	row-gap: 64px;
 	align-items: center;
+
+	&__caption {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 32px;
+	}
+
+	&__content {
+		display: none;
+		animation: fadeEffects 1s;
+
+		&.active {
+			display: block;
+		}
+	}
 
 	&__btn {
 		display: flex;
@@ -15,11 +31,30 @@
 		width: fit-content;
 		padding: 13px 16px;
 		cursor: pointer;
-		background-color: $graphite-900;
 		border-radius: 16px;
-		border: 2px solid $green-source;
-		color: $colors-full-white;
+		background-color: $colors-full-white;
+		border: 2px solid transparent;
+		color: $graphite-900;
 		transition: all 0.3s ease 0s;
+
+		svg {
+			path {
+				transition: all 0.3s ease 0s;
+				fill: $graphite-900;
+			}
+		}
+
+		&.active {
+			color: $colors-full-white;
+			background-color: $graphite-900;
+			border: 2px solid $green-source;
+
+			svg {
+				path {
+					fill: $colors-full-white;
+				}
+			}
+		}
 
 		&.blocked {
 			background: rgba(94, 94, 96, 0.15);
@@ -35,14 +70,6 @@
 
 		&.blocked:focus {
 			outline: none;
-		}
-
-
-		svg {
-			path {
-				transition: all 0.3s ease 0s;
-				fill: $colors-full-white;
-			}
 		}
 
 		&:hover {
@@ -69,35 +96,24 @@
 			}
 		}
 	}
-}
 
+	&__row {
+		display: flex;
+		flex-direction: row;
+		column-gap: 124px;
+	}
 
-.tabs__tab-btn--not-selected {
-	background-color: $colors-full-white;
-	border: 2px solid transparent;
-	color: $graphite-900;
+	&__left-column {
+		width: 100%;
+		max-width: 476px;
+	}
 
-	svg {
-		path {
-			fill: $graphite-900;
-		}
+	&__right-column {
+		width: calc(100% - 476px);
 	}
 }
 
-
-.tabs__tab--hide {
-	display: none;
-}
-
-.tabs__tab--show {
-	display: block;
-}
-
-.tabs__tab {
-	animation: tabApear 1s;
-}
-
-@keyframes tabApear {
+@keyframes fadeEffects {
 	from {
 		opacity: 0;
 	}
@@ -108,13 +124,18 @@
 }
 
 
+
+
+
+
 @media (max-width:$md1) {
 
 	/*! -- Tabs styles----------------------------- */
 
 	.tabs {
 		flex-wrap: wrap;
-		gap: 16px;
+		column-gap: 16px;
+		row-gap: 32px;
 
 		&__btn {
 			padding: 10px 12px;

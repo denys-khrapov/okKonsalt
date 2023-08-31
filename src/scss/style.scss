@@ -127,6 +127,7 @@ body {
 }
 
 .subtitle {
+	text-transform: uppercase;
 	color: $green-source;
 	font-size: 16px;
 	font-weight: 700;
@@ -167,6 +168,7 @@ body {
 @import "base/person";
 @import "blocks/header";
 @import "blocks/hero";
+@import "blocks/services";
 @import "blocks/reasons";
 @import "blocks/cta";
 @import "blocks/about";

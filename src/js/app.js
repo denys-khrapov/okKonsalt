@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
    testWebPFunction();
    initAccordion();
-   // initAccordionHover();
+   initAccordionHover();
    initReadMore();
    initTypeWriter();
    initSwiper();
@@ -46,31 +46,33 @@ function initAccordion() {
    }
 }
 
-// function initAccordionHover() {
-//    let acc = document.getElementsByClassName("accordion__btn");
-//    let isHoverEnabled = window.innerWidth >= 1280 && window.innerWidth <= 1920; // Check window width
+function initAccordionHover() {
+   let acc = document.getElementsByClassName("accordion-hover__btn");
+   let isHoverEnabled = window.innerWidth >= 1280 && window.innerWidth <= 1920;
 
-//    for (let i = 0; i < acc.length; i++) {
-//       acc[i].addEventListener(
-//          isHoverEnabled ? "mouseover" : "click",
-//          function () {
-//             let isActive = this.classList.contains("active");
+   for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener(
+         isHoverEnabled ? "mouseover" : "click",
+         function () {
+            let isActive = this.classList.contains("active");
 
-//             for (let j = 0; j < acc.length; j++) {
-//                acc[j].classList.remove("active");
-//                let panel = acc[j].nextElementSibling;
-//                panel.style.maxHeight = null;
-//             }
+            for (let j = 0; j < acc.length; j++) {
+               if (!isActive) {
+                  acc[j].classList.remove("active");
+                  let panel = acc[j].nextElementSibling;
+                  panel.style.maxHeight = null;
+               }
+            }
 
-//             if (!isActive) {
-//                this.classList.add("active");
-//                let panel = this.nextElementSibling;
-//                panel.style.maxHeight = panel.scrollHeight + "px";
-//             }
-//          }
-//       );
-//    }
-// }
+            if (!isActive) {
+               this.classList.add("active");
+               let panel = this.nextElementSibling;
+               panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+         }
+      );
+   }
+}
 
 function initReadMore() {
    var moreText = document.getElementById("more");
@@ -193,41 +195,17 @@ function initSwiper() {
 }
 
 function initTabs() {
-   const tabsBtns = Array.from(document.querySelectorAll("[data-tab-id]"));
-   const tabs = Array.from(document.querySelectorAll("[data-tab]"));
-
-   let selectedTab = tabsBtns[0].dataset.tabId;
-
-   const hideTabs = () => {
-      tabs
-         .filter((tab) => tab.dataset.tab !== selectedTab)
-         .forEach((tab) => {
-            tab.classList.add("tabs__tab--hide");
-         });
-
-      tabsBtns
-         .filter((tab) => tab.dataset.tabId !== selectedTab)
-         .forEach((tab) => {
-            tab.classList.add("tabs__tab-btn--not-selected");
-         });
-   };
-   hideTabs();
-
-   const handleSelectTab = (e) => {
-      selectedTab = e.target.dataset.tabId;
-
-      tabs.forEach((tab) => {
-         tab.classList.remove("tabs__tab--hide");
+   $(function () {
+      $(".tabs__caption").on("click", "button:not(.active)", function () {
+         $(this)
+            .addClass("active")
+            .siblings()
+            .removeClass("active")
+            .closest("div.tabs")
+            .find("div.tabs__content")
+            .removeClass("active")
+            .eq($(this).index())
+            .addClass("active");
       });
-
-      tabsBtns.forEach((tab) => {
-         tab.classList.remove("tabs__tab-btn--not-selected");
-      });
-
-      hideTabs();
-   };
-
-   tabsBtns.forEach((btn) => {
-      btn.addEventListener("click", handleSelectTab);
    });
 }

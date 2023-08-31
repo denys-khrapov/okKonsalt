@@ -94,6 +94,12 @@
 	.news {
 		padding: 64px 0;
 
+		.bg-holder {
+			img {
+				object-fit: cover;
+			}
+		}
+
 		&__container {
 			max-width: 866px;
 			row-gap: 32px;
