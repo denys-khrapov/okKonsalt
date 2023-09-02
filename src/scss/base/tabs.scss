@@ -24,12 +24,14 @@
 	}
 
 	&__btn {
+		font-size: 14px;
+		line-height: 1.3;
 		display: flex;
 		flex-direction: row;
 		column-gap: 8px;
 		align-items: center;
 		width: fit-content;
-		padding: 13px 16px;
+		padding: 13px 15px;
 		cursor: pointer;
 		border-radius: 16px;
 		background-color: $colors-full-white;

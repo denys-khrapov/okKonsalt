@@ -1,6 +1,6 @@
 /*! -- Services styles----------------------------- */
 .services {
-	padding: 96px 0;
+	padding: 98px 0;
 	position: relative;
 
 	&__container {
@@ -130,6 +130,19 @@
 
 			.btn-outline {
 				margin: 0 0 0 0;
+			}
+		}
+	}
+}
+
+@media (max-width:$md3) {
+
+	/*! -- Services styles----------------------------- */
+	.services {
+		.bg-holder {
+			img {
+				object-fit: cover;
+				object-position: 0 50%;
 			}
 		}
 	}

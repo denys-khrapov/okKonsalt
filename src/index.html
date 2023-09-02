@@ -110,6 +110,12 @@
 
 			<!-- Services section -->
 			<section class="services" id="section-services">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width: 1280px)" srcset="@img/services-bg.webp" type="image/webp">
+						<img src="@img/services-bg-mob.png" width="1920" height="1186" alt="image">
+					</picture>
+				</div>
 				<div class="services__container container">
 					<div class="services__header">
 						<h3 class="services__subtitle subtitle">НАШІ ПОСЛУГИ</h3>
@@ -1077,7 +1083,7 @@
 			</section>
 
 			<!-- Prices section -->
-			<section class="prices" id="section-partners">
+			<section class="prices" id="section-prices">
 				<div class="bg-holder">
 					<picture>
 						<source media="(min-width:1280px)" srcset="@img/prices-bg.webp" type="image/webp">
@@ -1823,7 +1829,7 @@
 						<h2 class="faq__title title">Знайдіть відповідь на свої запитання</h2>
 						<div class="accordion">
 							<div class="accordion__wrapper">
-								<button class="accordion__btn">
+								<button class="accordion__btn trigger-accordion-js">
 									Які галузі чи типи компаній ви обслуговуєте?
 									<div class="accordion__icon">
 									</div>
@@ -1852,7 +1858,7 @@
 								</div>
 							</div>
 							<div class="accordion__wrapper">
-								<button class="accordion__btn">
+								<button class="accordion__btn trigger-accordion-js">
 									Як ви гарантуєте конфіденційність та безпеку даних клієнта?
 									<div class="accordion__icon">
 									</div>
@@ -1866,7 +1872,7 @@
 								</div>
 							</div>
 							<div class="accordion__wrapper">
-								<button class="accordion__btn">
+								<button class="accordion__btn trigger-accordion-js">
 									Які документи необхідні для реєстрації ФОП?
 									<div class="accordion__icon">
 									</div>
@@ -1878,7 +1884,7 @@
 								</div>
 							</div>
 							<div class="accordion__wrapper">
-								<button class="accordion__btn">
+								<button class="accordion__btn trigger-accordion-js">
 									Чому варто звернутися до бухгалтерської компанії, а не наймати штатного співробітника?
 									<div class="accordion__icon">
 									</div>
@@ -1892,7 +1898,7 @@
 							</div>
 							<div id="more">
 								<div class="accordion__wrapper">
-									<button class="accordion__btn">
+									<button class="accordion__btn trigger-accordion-js">
 										Чи працюєте ви зі стартапами?
 										<div class="accordion__icon">
 										</div>
@@ -1904,7 +1910,7 @@
 									</div>
 								</div>
 								<div class="accordion__wrapper">
-									<button class="accordion__btn">
+									<button class="accordion__btn trigger-accordion-js">
 										Чи гарантуєте ви дотримання всіх змін у законодавстві?
 										<div class="accordion__icon">
 										</div>
@@ -1917,7 +1923,7 @@
 									</div>
 								</div>
 								<div class="accordion__wrapper">
-									<button class="accordion__btn">
+									<button class="accordion__btn trigger-accordion-js">
 										Як це працює? Як буде проходити обмін документами, спілкування з бухгалтером?
 										<div class="accordion__icon">
 										</div>
@@ -1938,7 +1944,7 @@
 									</div>
 								</div>
 								<div class="accordion__wrapper">
-									<button class="accordion__btn">
+									<button class="accordion__btn trigger-accordion-js">
 										Нас супроводжує так багато бухгалтерів як не заплутатись?
 										<div class="accordion__icon">
 										</div>
@@ -1952,7 +1958,7 @@
 									</div>
 								</div>
 								<div class="accordion__wrapper">
-									<button class="accordion__btn">
+									<button class="accordion__btn trigger-accordion-js">
 										Навіщо стільки бухгалтерів?
 										<div class="accordion__icon">
 										</div>
@@ -1966,7 +1972,7 @@
 									</div>
 								</div>
 								<div class="accordion__wrapper">
-									<button class="accordion__btn">
+									<button class="accordion__btn trigger-accordion-js">
 										Як все ці бухгалтера контролюються?
 										<div class="accordion__icon">
 										</div>
@@ -1980,7 +1986,7 @@
 									</div>
 								</div>
 								<div class="accordion__wrapper">
-									<button class="accordion__btn">
+									<button class="accordion__btn trigger-accordion-js">
 										Яку я можу отримати консультацію в рамках співпраці?
 										<div class="accordion__icon">
 										</div>
@@ -2013,7 +2019,20 @@
 		@@include('html/footer.html',{})
 	</div>
 
+	<div style="display: none;" id="step-form">
+		<h2>Hello</h2>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam in beatae atque ducimus odio, magnam
+			doloribus alias aliquid vitae modi, sit cupiditate voluptatem ab autem non obcaecati? Reprehenderit neque
+			repellat quas autem excepturi. Ipsum omnis in asperiores vel! Animi nihil tempore esse nemo vero molestias
+			nobis rerum quo eveniet?</p>
+	</div>
+
+
+
+
+
 	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/contactform.js"></script>

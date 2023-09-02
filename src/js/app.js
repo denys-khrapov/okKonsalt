@@ -1,10 +1,24 @@
 jQuery(document).ready(function ($) {
    testWebPFunction();
+   initMobileMenu();
+   initScrollTo();
+   initSubmenu();
    initAccordion();
    initAccordionHover();
-   initReadMore();
-   initTypeWriter();
-   initSwiper();
+   if ($("#read-more").length > 0) {
+      initReadMore();
+   }
+   if ($("#typewriter").length > 0) {
+      initTypeWriter();
+   }
+   if (
+      $(".team-slider").length > 0 ||
+      $(".cases-slider").length > 0 ||
+      $(".articles-slider").length > 0 ||
+      $(".about-slider").length > 0
+   ) {
+      initSwiper();
+   }
    initTabs();
 });
 
@@ -23,8 +37,68 @@ function testWebPFunction() {
    });
 }
 
+function initMobileMenu() {
+   const headerBurger = $(".header__burger");
+   const headerMenu = $(".header__menu");
+   const body = $("body");
+   const headerOverlay = $(".overlay");
+   const headerMenuLink = $(".header__link");
+   const headerBtnConsultation = $(".header .btn-full");
+
+   function closeMenu() {
+      headerBurger.removeClass("active");
+      headerMenu.removeClass("active");
+      body.removeClass("lock");
+   }
+
+   headerBurger.on("click", function () {
+      headerBurger.toggleClass("active");
+      headerMenu.toggleClass("active");
+      body.toggleClass("lock");
+   });
+
+   headerOverlay
+      .add(headerMenuLink)
+      .add(headerBtnConsultation)
+      .on("click", function () {
+         if (
+            body.hasClass("lock") &&
+            headerMenu.hasClass("active") &&
+            headerBurger.hasClass("active")
+         ) {
+            closeMenu();
+         }
+      });
+}
+
+function initScrollTo() {
+   $("a.scroll-to").click(function () {
+      $("html, body").animate(
+         {
+            scrollTop: $($(this).attr("href")).offset().top + "px",
+         },
+         {
+            duration: 700,
+            easing: "swing",
+         }
+      );
+      return false;
+   });
+}
+
+function initSubmenu() {
+   $(".menu-item-submenu a").mouseenter(function () {
+      $(".submenu").addClass("show");
+      $(this).addClass("active");
+   });
+   $(".header").mouseleave(function () {
+      $(".submenu").removeClass("show");
+      $(".menu-item-submenu a").removeClass("active");
+   });
+}
+
 function initAccordion() {
-   let acc = document.getElementsByClassName("accordion__btn");
+   let acc = document.getElementsByClassName("trigger-accordion-js");
    let i;
 
    for (i = 0; i < acc.length; i++) {
@@ -207,5 +281,12 @@ function initTabs() {
             .eq($(this).index())
             .addClass("active");
       });
+   });
+}
+
+if ($('[data-fancybox=""]').length > 0) {
+   $('[data-fancybox=""]').fancybox({
+      autoFocus: false,
+      touch: false,
    });
 }

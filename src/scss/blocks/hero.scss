@@ -3,6 +3,10 @@
 	padding: 32px 0;
 	position: relative;
 
+	.bg-holder {
+		height: auto;
+	}
+
 	&__container {
 		display: flex;
 		flex-direction: row;
@@ -91,6 +95,7 @@
 		.btn-full {
 			width: 100%;
 			padding: 14px;
+			text-transform: none;
 		}
 	}
 
@@ -149,6 +154,7 @@
 			color: $graphite-900;
 			font-size: 12px;
 			line-height: 1.5;
+			flex: 1;
 			min-width: 144px;
 		}
 
