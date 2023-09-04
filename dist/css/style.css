@@ -1346,6 +1346,7 @@ body.lock {
 
 input[type=text],
 input[type=tel] {
+  font-family: "OpenSans", sans-serif, serif;
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1364,6 +1365,7 @@ input[type=tel] {
 
 input[type=text]::-webkit-input-placeholder,
 input[type=tel]::-webkit-input-placeholder {
+  font-family: "OpenSans", sans-serif, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1373,6 +1375,7 @@ input[type=tel]::-webkit-input-placeholder {
 
 input[type=text]::-moz-placeholder,
 input[type=tel]::-moz-placeholder {
+  font-family: "OpenSans", sans-serif, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1382,6 +1385,7 @@ input[type=tel]::-moz-placeholder {
 
 input[type=text]:-ms-input-placeholder,
 input[type=tel]:-ms-input-placeholder {
+  font-family: "OpenSans", sans-serif, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1391,6 +1395,7 @@ input[type=tel]:-ms-input-placeholder {
 
 input[type=text]::-ms-input-placeholder,
 input[type=tel]::-ms-input-placeholder {
+  font-family: "OpenSans", sans-serif, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1400,6 +1405,7 @@ input[type=tel]::-ms-input-placeholder {
 
 input[type=text]::placeholder,
 input[type=tel]::placeholder {
+  font-family: "OpenSans", sans-serif, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1510,6 +1516,63 @@ input.novalid:focus {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 400;
+}
+
+/*! -- Breadcrumbs styles----------------------------- */
+
+.breadcrumbs {
+  background-color: #FFFFFF;
+  padding: 16px 0;
+}
+
+.breadcrumbs .breadcrumbs__list span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 16px;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+}
+
+.breadcrumbs .breadcrumbs__list span span a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 4px;
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+  color: #4B4B4D;
+  font-size: 14px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.breadcrumbs .breadcrumbs__list span span a:hover {
+  color: #9EBB58;
+}
+
+.breadcrumbs .breadcrumbs__list span span a:active {
+  color: #325500;
+}
+
+.breadcrumbs__last {
+  color: #9B9B9D;
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 /*! -- Buttons styles----------------------------- */
@@ -1866,6 +1929,103 @@ input.novalid:focus {
   color: #5E5E60;
 }
 
+/*! -- Map styles----------------------------- */
+
+.map {
+  height: 479px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*! -- CTA-card styles----------------------------- */
+
+.cta-card h4 {
+  color: #39393A;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 48px 0;
+  padding: 0 155px 0 0;
+}
+
+.cta-card p {
+  color: #39393A;
+  margin: 0 0 48px 0;
+}
+
+.cta-card .btn-full {
+  margin-left: auto;
+}
+
+.cta-card .form__input-holder {
+  margin: 0 0 16px 0;
+}
+
+.cta-card .form input[type=text],
+.cta-card .form input[type=tel] {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 11px 12px 11px 44px;
+}
+
+.cta-card .form input[type=text]::-webkit-input-placeholder,
+.cta-card .form input[type=tel]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cta-card .form input[type=text]::-moz-placeholder,
+.cta-card .form input[type=tel]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cta-card .form input[type=text]:-ms-input-placeholder,
+.cta-card .form input[type=tel]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cta-card .form input[type=text]::-ms-input-placeholder,
+.cta-card .form input[type=tel]::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cta-card .form input[type=text]::placeholder,
+.cta-card .form input[type=tel]::placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cta-card .form__phone-label,
+.cta-card .form__name-label {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cta-card.card {
+  position: relative;
+  height: 100%;
+  max-width: 476px;
+}
+
+.cta-card .card__inner {
+  padding: 48px 32px;
+}
+
+.cta-card .badge {
+  position: absolute;
+}
+
+.cta-card .badge--orange {
+  top: 16px;
+  right: 16px;
+}
+
 /*! -- Header styles----------------------------- */
 
 .header {
@@ -1878,6 +2038,7 @@ input.novalid:focus {
 
 .header__container {
   max-width: 1573px;
+  padding: 0 52px;
 }
 
 .header__burger {
@@ -2137,6 +2298,7 @@ input.novalid:focus {
 }
 
 .phone-box .btn-full {
+  display: none;
   padding: 6px 16px 6px 8px;
   color: #F3F3F4;
   font-weight: 400;
@@ -2154,6 +2316,12 @@ input.novalid:focus {
 
 .phone-box .btn-full:active span svg path {
   fill: #39393A;
+}
+
+.phone-box .btn-full.scroll-to {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*! -- Hero styles----------------------------- */
@@ -2491,6 +2659,31 @@ input.novalid:focus {
   margin: 0 0 0 0;
 }
 
+.reasons__card .card__inner {
+  border: 2px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.reasons__card .card h3,
+.reasons__card .card p {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.reasons__card:hover .card__inner {
+  background: #39393A;
+  border: 2px solid #8AB32C;
+}
+
+.reasons__card:hover .card__inner h3 {
+  color: #F3F3F4;
+}
+
+.reasons__card:hover .card__inner p {
+  color: #B0B0B2;
+}
+
 /*! -- CTA styles----------------------------- */
 
 .cta {
@@ -2557,89 +2750,6 @@ input.novalid:focus {
   column-gap: 24px;
 }
 
-.cta__form-holder h4 {
-  color: #39393A;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin: 0 0 46px 0;
-}
-
-.cta__form-holder p {
-  color: #39393A;
-  margin: 0 0 46px 0;
-}
-
-.cta__form-holder .btn-full {
-  margin-left: auto;
-}
-
-.cta .form__input-holder {
-  margin: 0 0 16px 0;
-}
-
-.cta .form input[type=text],
-.cta .form input[type=tel] {
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 11px 12px 11px 44px;
-}
-
-.cta .form input[type=text]::-webkit-input-placeholder,
-.cta .form input[type=tel]::-webkit-input-placeholder {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.cta .form input[type=text]::-moz-placeholder,
-.cta .form input[type=tel]::-moz-placeholder {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.cta .form input[type=text]:-ms-input-placeholder,
-.cta .form input[type=tel]:-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.cta .form input[type=text]::-ms-input-placeholder,
-.cta .form input[type=tel]::-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.cta .form input[type=text]::placeholder,
-.cta .form input[type=tel]::placeholder {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.cta .form__phone-label,
-.cta .form__name-label {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.cta .card {
-  position: relative;
-  height: 100%;
-  max-width: 476px;
-}
-
-.cta .card__inner {
-  padding: 48px 32px;
-}
-
-.cta .badge {
-  position: absolute;
-}
-
-.cta .badge--orange {
-  top: 16px;
-  right: 16px;
-}
-
 .cta__column--video {
   display: none;
 }
@@ -2675,6 +2785,41 @@ input.novalid:focus {
 
 .about .promo p {
   max-width: 100%;
+}
+
+.about .card__inner {
+  border: 2px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.about .card h3,
+.about .card p,
+.about .card h4,
+.about .card span {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.about-slide:hover .card__inner {
+  background: #39393A;
+  border: 2px solid #8AB32C;
+}
+
+.about-slide:hover .card__inner h4 {
+  color: #FFFFFF;
+}
+
+.about-slide:hover .card__inner h3 {
+  color: #F3F3F4;
+}
+
+.about-slide:hover .card__inner span {
+  color: #F2F5E5;
+}
+
+.about-slide:hover .card__inner p {
+  color: #B0B0B2;
 }
 
 /*! -- Prices styles----------------------------- */
@@ -2774,6 +2919,42 @@ input.novalid:focus {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.prices .card__inner {
+  border: 2px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.prices .card .prices__text,
+.prices .card .prices__currency,
+.prices .card h4,
+.prices .card span,
+.prices .card li {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.prices .card:hover .card__inner {
+  background: #39393A;
+  border: 2px solid #8AB32C;
+}
+
+.prices .card:hover .card__inner h4 {
+  color: #FFFFFF;
+}
+
+.prices .card:hover .card__inner .prices__text {
+  color: #FFFFFF;
+}
+
+.prices .card:hover .card__inner .prices__currency {
+  color: #B0B0B2;
+}
+
+.prices .card:hover .card__inner li {
+  color: #B0B0B2;
 }
 
 .prices__text-holder {
@@ -2916,6 +3097,24 @@ input.novalid:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 16px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border: 2px solid transparent;
+}
+
+.partners__logo svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.partners__logo:hover {
+  background-color: #39393A;
+  border: 2px solid #8AB32C;
+}
+
+.partners__logo:hover svg path {
+  fill: #FFFFFF;
 }
 
 .partners__form-holder {
@@ -2984,6 +3183,55 @@ input.novalid:focus {
   -ms-flex-pack: start;
   justify-content: flex-start;
   row-gap: 24px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border: 2px solid #DDDDDD;
+}
+
+.news .card__inner h4,
+.news .card__inner h5,
+.news .card__inner p,
+.news .card__inner a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.news .card__inner a svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.news .card__inner:hover {
+  background-color: #39393A;
+  border: 2px solid #8AB32C;
+}
+
+.news .card__inner:hover h4 {
+  color: #FFFFFF;
+}
+
+.news .card__inner:hover h5 {
+  color: #FFFFFF;
+}
+
+.news .card__inner:hover p {
+  color: #C6C6C7;
+}
+
+.news .card__inner:hover a {
+  color: #9EBB58;
+}
+
+.news .card__inner:hover a:active {
+  color: #325500;
+}
+
+.news .card__inner:hover a:active svg path {
+  fill: #325500;
+}
+
+.news .card__inner:hover a svg path {
+  fill: #9EBB58;
 }
 
 .news .card h4 {
@@ -3338,6 +3586,231 @@ input.novalid:focus {
   margin: 48px 0 0 0;
 }
 
+/* Style the form */
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+/* Style the input fields */
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+
+.step.finish {
+  background-color: #4CAF50;
+}
+
+/*! -- Contacts styles----------------------------- */
+
+.contacts {
+  padding: 32px 0 64px;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 124px;
+  -moz-column-gap: 124px;
+  column-gap: 124px;
+}
+
+.contacts__cards {
+  width: 100%;
+  max-width: 576px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.contacts__content {
+  width: calc(100% - 576px);
+}
+
+.contacts .card {
+  min-height: 276px;
+}
+
+.contacts .card__inner {
+  border: 2px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts .card h4 {
+  color: #39393A;
+  font-size: 24px;
+  line-height: 1.3;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts .card .contacts__text-holder {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts .card:hover .card__inner {
+  background-color: #39393A;
+  border: 2px solid #8AB32C;
+}
+
+.contacts .card:hover .card__inner h4 {
+  color: #F3F3F4;
+}
+
+.contacts .card:hover .card__inner .contacts__text-holder {
+  color: #B0B0B2;
+}
+
+.contacts__text-holder {
+  color: #5E5E60;
+}
+
+.contacts__phone {
+  color: #8AB32C;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.contacts__email {
+  color: #5E5E60;
+}
+
+.contacts .person__text p + p {
+  margin: 24px 0 0 0;
+}
+
+/*! -- Jumbotron styles----------------------------- */
+
+.jumbotron {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E1E1E1), to(rgba(243, 243, 244, 0)));
+  background: linear-gradient(180deg, #E1E1E1 0%, rgba(243, 243, 244, 0) 100%);
+  position: relative;
+  padding: 96px 0;
+}
+
+.jumbotron .bg-holder {
+  mix-blend-mode: screen;
+}
+
+.jumbotron .bg-holder img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.jumbotron__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 124px;
+  -moz-column-gap: 124px;
+  column-gap: 124px;
+}
+
+.jumbotron__title {
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.jumbotron__suptitle {
+  color: #39393A;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 48px 0;
+}
+
+.jumbotron__left-column {
+  width: 100%;
+  max-width: 576px;
+}
+
+.jumbotron__right-column {
+  width: calc(100% - 576px);
+}
+
+.jumbotron__text-holder {
+  color: #5E5E60;
+}
+
+.jumbotron__text-holder p {
+  margin: 0 0 0 0;
+}
+
+.jumbotron__text-holder p + p {
+  margin: 20px 0 0 0;
+}
+
 .webp .promo--gradient {
   background-image: url(../img/promo-bg.webp);
 }
@@ -3611,6 +4084,16 @@ input.novalid:focus {
     height: 16px;
   }
 
+  /*! -- Breadcrumbs styles----------------------------- */
+
+  .breadcrumbs {
+    padding: 8px 0;
+  }
+
+  .breadcrumbs__container {
+    padding: 0 16px;
+  }
+
   /*! -- Buttons styles----------------------------- */
 
   .btn-full {
@@ -3695,6 +4178,82 @@ input.novalid:focus {
 
   .person__position {
     font-size: 12px;
+  }
+
+  /*! -- Map styles----------------------------- */
+
+  .map {
+    height: 320px;
+  }
+
+  /*! -- CTA-card styles----------------------------- */
+
+  .cta-card h4 {
+    font-size: 16px;
+    max-width: 100px;
+    margin: 0 0 24px 0;
+  }
+
+  .cta-card p {
+    font-size: 14px;
+    margin: 0 0 24px 0;
+    line-height: 1.3;
+  }
+
+  .cta-card .form__input-holder {
+    margin: 0 0 8px 0;
+  }
+
+  .cta-card .form__phone-label,
+  .cta-card .form__name-label {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .cta-card .form input[type=text],
+  .cta-card .form input[type=tel] {
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 8.5px 12px 8.5px 34px;
+  }
+
+  .cta-card .form input[type=text]::-webkit-input-placeholder,
+  .cta-card .form input[type=tel]::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .cta-card .form input[type=text]::-moz-placeholder,
+  .cta-card .form input[type=tel]::-moz-placeholder {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .cta-card .form input[type=text]:-ms-input-placeholder,
+  .cta-card .form input[type=tel]:-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .cta-card .form input[type=text]::-ms-input-placeholder,
+  .cta-card .form input[type=tel]::-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .cta-card .form input[type=text]::placeholder,
+  .cta-card .form input[type=tel]::placeholder {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .cta-card .card {
+    height: auto;
+    max-width: 389px;
+  }
+
+  .cta-card .card__inner {
+    padding: 24px 15px;
   }
 
   /*! -- Header styles----------------------------- */
@@ -3870,6 +4429,10 @@ input.novalid:focus {
     font-size: 0;
     padding: 0;
     border: 0;
+  }
+
+  .header .phone-box .btn-full.scroll-to {
+    display: none;
   }
 
   .header .phone-box .btn-full span {
@@ -4468,42 +5031,6 @@ input.novalid:focus {
     max-width: 389px;
   }
 
-  .cta .card {
-    height: auto;
-    max-width: 389px;
-  }
-
-  .cta .card__inner {
-    padding: 24px 16px;
-  }
-
-  .cta__form-holder h4 {
-    font-size: 16px;
-    max-width: 100px;
-    margin: 0 0 24px 0;
-  }
-
-  .cta__form-holder p {
-    font-size: 14px;
-    margin: 0 0 24px 0;
-    line-height: 1.3;
-  }
-
-  .cta .form__input-holder {
-    margin: 0 0 8px 0;
-  }
-
-  .cta .form__phone-label,
-  .cta .form__name-label {
-    font-size: 14px;
-    line-height: 1.3;
-  }
-
-  .cta .form input[type=text],
-  .cta .form input[type=tel] {
-    padding: 8.5px 12px 8.5px 34px;
-  }
-
   /*! -- About styles----------------------------- */
 
   .about {
@@ -5055,6 +5582,116 @@ input.novalid:focus {
 
   .success .btn-full {
     margin: 24px 0 0 0;
+  }
+
+  /*! -- Contacts styles----------------------------- */
+
+  .contacts__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-column-gap: 48px;
+    -moz-column-gap: 48px;
+    column-gap: 48px;
+    row-gap: 24px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .contacts__cards {
+    min-width: 256px;
+    max-width: 536px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 24px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .contacts__content {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 256px;
+  }
+
+  .contacts .card {
+    min-height: 256px;
+    min-width: 256px;
+    max-width: 256px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .contacts .card h4 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .contacts__text-holder {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  /*! -- Jumbotron styles----------------------------- */
+
+  .jumbotron {
+    padding: 64px 0;
+  }
+
+  .jumbotron .bg-holder img {
+    -o-object-position: 0 0;
+    object-position: 0 0;
+    -o-object-fit: none;
+    object-fit: none;
+  }
+
+  .jumbotron__container {
+    gap: 32px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .jumbotron__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+
+  .jumbotron__suptitle {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 32px 0;
+  }
+
+  .jumbotron__text-holder {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .jumbotron__text-holder p + p {
+    margin: 18px 0 0 0;
+  }
+
+  .jumbotron__left-column {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .jumbotron__right-column--cta-card {
+    width: 100%;
+    max-width: 389px;
   }
 }
 

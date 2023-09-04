@@ -107,6 +107,33 @@
 				margin: 0 0 0 0;
 			}
 		}
+
+		.card {
+			&__inner {
+				border: 2px solid transparent;
+				transition: all 0.3s ease 0s;
+			}
+
+			h3,
+			p {
+				transition: all 0.3s ease 0s;
+			}
+		}
+
+		&:hover {
+			.card__inner {
+				background: $graphite-900;
+				border: 2px solid $green-source;
+
+				h3 {
+					color: $graphite-50;
+				}
+
+				p {
+					color: $graphite-300;
+				}
+			}
+		}
 	}
 }
 

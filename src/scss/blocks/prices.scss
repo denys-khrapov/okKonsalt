@@ -68,7 +68,46 @@
 				line-height: 1.5;
 			}
 		}
+
+		&__inner {
+			border: 2px solid transparent;
+			transition: all 0.3s ease 0s;
+		}
+
+		.prices__text,
+		.prices__currency,
+		h4,
+		span,
+		li {
+			transition: all 0.3s ease 0s;
+		}
+
+
+		&:hover {
+			.card__inner {
+				background: $graphite-900;
+				border: 2px solid $green-source;
+
+				h4 {
+					color: $colors-full-white;
+				}
+
+				.prices__text {
+					color: $colors-full-white;
+				}
+
+				.prices__currency {
+					color: $graphite-300;
+				}
+
+				li {
+					color: $graphite-300;
+				}
+			}
+		}
 	}
+
+
 
 	&__text-holder {
 		display: flex;

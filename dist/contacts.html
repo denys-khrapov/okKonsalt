@@ -1,4 +1,19 @@
-<!-- Header section -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/x-icon" href="img/favico.svg" />
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<title>Contacts</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Header section -->
 <header class="header">
 	<div class="header__container container">
 		<div class="header__row">
@@ -10,8 +25,8 @@
 			<div class="header__column">
 				<a href="index.html" class="header__logo-holder">
 					<picture>
-						<source media="(min-width:1280px)" srcset="@img/logo-black.svg" type="image/webp">
-						<img src="@img/logo-header-mob.svg" width="185" height="44" alt="icon">
+						<source media="(min-width:1280px)" srcset="img/logo-black.svg" type="image/webp">
+						<img src="img/logo-header-mob.svg" width="185" height="44" alt="icon">
 					</picture>
 				</a>
 				<div class="header__lang lang">
@@ -352,13 +367,13 @@
 					<div class="promo__inner">
 						<div class="promo__image-holder">
 							<picture>
-								<source media="(min-width:1280px)" srcset="@img/promo-header-img.webp" type="image/webp">
-								<img src="@img/promo-img-mob.png" width="139" height="276" alt="image">
+								<source media="(min-width:1280px)" srcset="img/promo-header-img.webp" type="image/webp">
+								<img src="img/promo-img-mob.png" width="139" height="276" alt="image">
 							</picture>
 						</div>
 
 						<div class="promo__decor-holder">
-							<img src="@img/promo-header-decor.png" width="250" height="250" alt="image">
+							<picture><source srcset="img/promo-header-decor.webp" type="image/webp"><img src="img/promo-header-decor.png" width="250" height="250" alt="image"></picture>
 						</div>
 						<div class="promo__content">
 							<h3>Комплексний
@@ -378,3 +393,263 @@
 		</div>
 	</div>
 </header>
+		<main class="content">
+
+			<!-- Breadcrumbs -->
+			<section class="breadcrumbs">
+				<div class="breadcrumbs__container container">
+					<div id="breadcrumbs__list" class="breadcrumbs__list">
+						<span>
+							<span>
+								<a class="links" href="index.html">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M14.478 7.52875L13.143 6.19541L8.47061 1.52869C8.34544 1.40371 8.17569 1.3335 7.9987 1.3335C7.82171 1.3335 7.65196 1.40371 7.52679 1.52869L2.85438 6.19541L1.5194 7.52875C1.39781 7.65449 1.33054 7.82289 1.33206 7.99769C1.33358 8.17249 1.40378 8.3397 1.52753 8.46331C1.65129 8.58692 1.81871 8.65703 1.99372 8.65855C2.16873 8.66007 2.33734 8.59287 2.46323 8.47143L2.6588 8.27609V13.3335C2.6588 13.6871 2.79945 14.0263 3.04981 14.2763C3.30016 14.5264 3.63972 14.6668 3.99378 14.6668H5.99624C6.17327 14.6668 6.34304 14.5966 6.46822 14.4716C6.5934 14.3465 6.66372 14.177 6.66372 14.0002V11.3335C6.66372 11.1566 6.73405 10.9871 6.85923 10.8621C6.98441 10.737 7.15418 10.6668 7.33121 10.6668H8.66619C8.84321 10.6668 9.01299 10.737 9.13817 10.8621C9.26335 10.9871 9.33367 11.1566 9.33367 11.3335V14.0002C9.33367 14.177 9.404 14.3465 9.52917 14.4716C9.65435 14.5966 9.82413 14.6668 10.0012 14.6668H12.0036C12.3577 14.6668 12.6972 14.5264 12.9476 14.2763C13.1979 14.0263 13.3386 13.6871 13.3386 13.3335V8.27609L13.5342 8.47143C13.6601 8.59287 13.8287 8.66007 14.0037 8.65855C14.1787 8.65703 14.3461 8.58692 14.4699 8.46331C14.5936 8.3397 14.6638 8.17249 14.6653 7.99769C14.6669 7.82289 14.5996 7.65449 14.478 7.52875Z"
+											fill="#4B4B4D" />
+									</svg>
+									Головна
+								</a>
+							</span>
+							<span class="brDevider">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M11.2635 8.26492L6.26346 13.2649C6.19237 13.3312 6.09835 13.3672 6.0012 13.3655C5.90405 13.3638 5.81135 13.3244 5.74265 13.2557C5.67394 13.187 5.63459 13.0943 5.63287 12.9972C5.63116 12.9 5.66722 12.806 5.73346 12.7349L10.4678 7.99992L5.73346 3.26492C5.66722 3.19384 5.63116 3.09981 5.63287 3.00266C5.63459 2.90551 5.67394 2.81282 5.74265 2.74411C5.81135 2.67541 5.90405 2.63605 6.0012 2.63434C6.09835 2.63262 6.19237 2.66868 6.26346 2.73492L11.2635 7.73492C11.3337 7.80524 11.3731 7.90055 11.3731 7.99992C11.3731 8.0993 11.3337 8.19461 11.2635 8.26492Z"
+										fill="#4B4B4D" />
+								</svg>
+							</span>
+							<span class="breadcrumbs__last" aria-current="page">Контакти
+							</span>
+						</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Jumbotron section -->
+			<section class="jumbotron" id="section-jumbotron">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="img/square-bg.webp" type="image/webp">
+						<img src="img/square-bg-mob.png" width="1920" height="744" alt="image">
+					</picture>
+				</div>
+				<div class="jumbotron__container container">
+					<div class="jumbotron__left-column">
+						<h2 class="jumbotron__title title">Контакти</h2>
+						<h3 class="jumbotron__suptitle">Зв'яжіться з нами для успішного розвитку вашого бізнесу!</h3>
+						<div class="jumbotron__text-holder">
+							<p>Тут ви знайдете всі необхідні контактні дані, щоб зв'язатися з нами. Якщо у вас виникли питання,
+								вам потрібна додаткова інформація або ви хотіли б обговорити можливу співпрацю, звертайтеся до
+								нас. 🤝
+							</p>
+							<p>Наша доброзичлива та професійна команда готова відповісти на ваші запити та надати вам всю
+								необхідну підтримку.</p>
+						</div>
+					</div>
+					<div class="jumbotron__right-column jumbotron__right-column--cta-card">
+						<div class="cta__card card cta-card">
+							<div class="card__inner">
+								<div class="badge badge--orange">
+									<h5>Знижка 10%</h5>
+									<span>на контракт від 3 місяців!</span>
+									<div class="badge__svg-holder">
+										<img src="img/fire.svg" width="82" height="83" alt="icon">
+									</div>
+								</div>
+								<div class="cta__form-holder">
+									<h4>ЗВОРОТНІЙ
+										ЗВ'ЯЗОК</h4>
+									<p>Залишіть свій телефон і ми зв'яжемося з вами та обговоримо всі деталі співпраці!</p>
+									<div id="note"></div>
+									<form class="form" id="ajax-contact-form" action="" data-form-validate="true">
+										<div class="form__inner">
+											<div class="form__name-label">Ваше ім'я</div>
+											<div class="form__input-holder form__input-holder--user">
+												<span>
+													<input type="text" value="" name="name-client"
+														placeholder="Наприклад: Григорій Сковорода" required />
+												</span>
+											</div>
+											<div class="form__phone-label">Ваш телефон</div>
+											<div class="form__input-holder form__input-holder--phone">
+												<span>
+													<input type="tel" value="" name="phone-client"
+														placeholder="+38 (ХХХ) ХХХ - ХХ - ХХ" required />
+												</span>
+											</div>
+											<input type="hidden" name="url">
+											<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+											<div class="form__button-holder">
+												<button class="btn-full" type="submit">
+													ВІДПРАВИТИ
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- Contacts -->
+			<section class="contacts" id="section-contacts">
+				<div class="contacts__container container">
+					<div class="contacts__content">
+						<div class="person">
+							<div class="person__row">
+								<div class="person__left-column">
+									<div class="person__image-holder">
+										<picture><source srcset="img/olga-avatar.webp" type="image/webp"><img src="img/olga-avatar.jpg" width="65" height="65" alt="image"></picture>
+									</div>
+								</div>
+								<div class="person__right-column">
+									<h5 class="person__name">Дерев’янко Ольга</h5>
+									<div class="person__text">
+										<p>Ми готові допомогти вам у складних питаннях фінансів та законодавства, щоб
+											забезпечити успішний розвиток вашого бізнесу.</p>
+										<p>Наша команда експертів із задоволенням відповість на ваші запити та надасть якісну
+											консультацію, необхідну для досягнення ваших цілей.</p>
+									</div>
+									<div class="person__position">Генеральний директор компанії “OK-Консалт”</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts__cards">
+						<div class="card">
+							<div class="card__inner">
+								<h4>Наша адреса</h4>
+								<div class="contacts__text-holder">
+									<p>м. Київ,</p>
+									<p> вул. Дегтярівська, будинок. 53а, офіс 419-420</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card__inner">
+								<h4>Телефон</h4>
+								<div class="contacts__text-holder">
+									<a class="contacts__phone" href="tel:+380504749294">+38 (050) 474-92-94</a>
+									<a class="contacts__email" href="#">
+										нужна_пошта@сюди.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.8256923133013!2d30.44970197683524!3d50.46297048646174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc328faba34f%3A0x219673db7c593f8a!2z0YPQuy4g0JTQtdCz0YLRj9GA0ZHQstGB0LrQsNGPLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1693823121107!5m2!1sru!2sua"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</main>
+		<!-- Footer section -->
+<footer class="footer" id="section-footer">
+	<div class="bg-holder">
+		<picture>
+			<source media="(min-width:992px)" srcset="img/footer-bg.webp" type="image/webp">
+			<source media="(min-width:476px)" srcset="img/footer-bg-tablet.png" type="image/png">
+			<img src="img/footer-bg-mob.png" width="1920" height="445" alt="image">
+		</picture>
+	</div>
+	<div class="footer__container container">
+		<div class="footer__row">
+			<div class="footer__column footer__column--menu">
+				<h4>КЛІЄНТАМ</h4>
+				<ul class="menu">
+					<li class="menu-item">
+						<a class="menu-links" href="#">Послуги</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-links" href="#">Про нас</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-links" href="#">Кейси</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-links" href="#">Новини та статті</a>
+					</li>
+					<li class="menu-item">
+						<a class="menu-links" href="#">Контакти</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__column">
+				<h4>АДРЕСА</h4>
+				<ul>
+					<li><span>м. Київ</span></li>
+					<li>вул. Дегтярівська, будинок. 53а, офіс 419-420</li>
+					<li><a class="footer__google-maps" href="#">Дивитися на Google Maps</a></li>
+				</ul>
+			</div>
+			<div class="footer__column">
+				<h4>ЗВ'ЯЗОК З НАМИ</h4>
+				<ul>
+					<li><a class="footer__phone" href="tel:+380504749294">+38 (050) 474-92-94</a></li>
+					<li><a class="footer__email" href="mailto:нужна_пошта@сюди.com">нужна_пошта@сюди.com</a></li>
+				</ul>
+				<a class="btn-full scroll-to" href="#section-cta">ЗАМОВИТИ КОНСУЛЬТАЦІЮ</a>
+			</div>
+		</div>
+		<div class="footer__row footer__row--copyright">
+			<div class="footer__column">
+				<div class="logo">
+					<a href="index.html">
+						<picture>
+							<source media="(min-width:1280px)" srcset="img/logo-white.svg" type="image/webp">
+							<img src="img/logo-white-mob.svg" width="157" height="37" alt="image">
+						</picture>
+					</a>
+				</div>
+			</div>
+			<div class="footer__column footer__column--text">
+				<p>Kyiv, str. Degtyarivska, building. 53a, office 419-420 © 2023 ok-consulting.com.ua - Consulting services
+					for business. All rights reserved.</p>
+			</div>
+			<div class="footer__column">
+				<ul class="social">
+					<li>
+						<a class="btn-full" href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M9.99852 3.16635C12.2205 3.16635 12.4872 3.17469 13.3654 3.21468C13.8939 3.22092 14.4174 3.31807 14.913 3.50188C15.2748 3.63543 15.6021 3.84842 15.8707 4.12515C16.1474 4.39377 16.3604 4.72103 16.494 5.08283C16.6778 5.57841 16.7749 6.10192 16.7812 6.63045C16.8212 7.51036 16.8312 7.777 16.8312 9.999C16.8312 12.221 16.8228 12.4876 16.7828 13.3659C16.7766 13.8944 16.6795 14.4179 16.4956 14.9135C16.3569 15.2727 16.1446 15.5989 15.8724 15.8712C15.6001 16.1435 15.2739 16.3558 14.9147 16.4945C14.4191 16.6783 13.8956 16.7754 13.3671 16.7817C12.4888 16.8217 12.225 16.83 10.0002 16.83C7.7754 16.83 7.51154 16.8217 6.6333 16.7817C6.10477 16.7754 5.58125 16.6783 5.08567 16.4945C4.72387 16.3609 4.39662 16.1479 4.12799 15.8712C3.85126 15.6026 3.63828 15.2753 3.50472 14.9135C3.32091 14.4179 3.22376 13.8944 3.21753 13.3659C3.17586 12.4876 3.16587 12.2238 3.16587 9.999C3.16587 7.77423 3.1742 7.51036 3.21419 6.63212C3.22043 6.10359 3.31758 5.58007 3.50139 5.0845C3.63543 4.72254 3.84899 4.39527 4.12633 4.12681C4.39495 3.85008 4.7222 3.6371 5.08401 3.50354C5.57959 3.31974 6.1031 3.22259 6.63163 3.21635C7.50988 3.17635 7.77652 3.16635 9.99852 3.16635ZM9.99852 1.6665C7.73541 1.6665 7.45155 1.67595 6.5633 1.7165C5.87183 1.73115 5.18781 1.86262 4.54017 2.10535C3.98454 2.31446 3.48109 2.64201 3.06476 3.06525C2.64092 3.48141 2.3128 3.98488 2.10319 4.54066C1.86046 5.1883 1.72899 5.87232 1.71434 6.56379C1.67546 7.45204 1.66602 7.7359 1.66602 9.999C1.66602 12.2621 1.67546 12.546 1.71601 13.4342C1.73066 14.1257 1.86213 14.8097 2.10486 15.4573C2.31446 16.0131 2.64259 16.5166 3.06643 16.9328C3.48259 17.3566 3.98606 17.6847 4.54184 17.8943C5.18948 18.1371 5.8735 18.2685 6.56497 18.2832C7.45377 18.3237 7.73708 18.3332 10.0002 18.3332C12.2633 18.3332 12.5472 18.3237 13.4354 18.2832C14.1269 18.2685 14.8109 18.1371 15.4585 17.8943C16.0118 17.6799 16.5143 17.3524 16.9339 16.9328C17.3535 16.5132 17.681 16.0107 17.8955 15.4573C18.1382 14.8097 18.2697 14.1257 18.2844 13.4342C18.3249 12.5454 18.3343 12.2621 18.3343 9.999C18.3343 7.7359 18.3249 7.45204 18.2844 6.56379C18.2697 5.87232 18.1382 5.1883 17.8955 4.54066C17.6859 3.98488 17.3578 3.48141 16.9339 3.06525C16.5178 2.64141 16.0143 2.31329 15.4585 2.10368C14.8109 1.86095 14.1269 1.72948 13.4354 1.71483C12.5455 1.67595 12.2616 1.6665 9.99852 1.6665Z"
+									fill="#39393A" />
+								<path
+									d="M9.99851 5.72165C9.15253 5.72165 8.32554 5.97252 7.62214 6.44252C6.91873 6.91252 6.37049 7.58055 6.04675 8.36213C5.72301 9.14372 5.6383 10.0037 5.80334 10.8335C5.96839 11.6632 6.37576 12.4254 6.97396 13.0235C7.57216 13.6217 8.33431 14.0291 9.16404 14.1942C9.99376 14.3592 10.8538 14.2745 11.6354 13.9508C12.417 13.627 13.085 13.0788 13.555 12.3754C14.025 11.672 14.2759 10.845 14.2759 9.999C14.2759 8.86458 13.8252 7.77662 13.023 6.97446C12.2209 6.1723 11.1329 5.72165 9.99851 5.72165ZM9.99851 12.7765C9.44917 12.7765 8.91217 12.6136 8.45541 12.3084C7.99865 12.0032 7.64265 11.5694 7.43243 11.0619C7.22221 10.5544 7.1672 9.99592 7.27437 9.45714C7.38155 8.91836 7.64608 8.42346 8.03452 8.03502C8.42296 7.64658 8.91786 7.38204 9.45664 7.27487C9.99543 7.1677 10.5539 7.22271 11.0614 7.43293C11.5689 7.64315 12.0027 7.99915 12.3079 8.45591C12.6131 8.91267 12.776 9.44967 12.776 9.999C12.776 10.7356 12.4834 11.4421 11.9625 11.963C11.4416 12.4839 10.7351 12.7765 9.99851 12.7765Z"
+									fill="#39393A" />
+								<path
+									d="M14.4464 6.55102C14.9986 6.55102 15.4463 6.10335 15.4463 5.55112C15.4463 4.99889 14.9986 4.55122 14.4464 4.55122C13.8942 4.55122 13.4465 4.99889 13.4465 5.55112C13.4465 6.10335 13.8942 6.55102 14.4464 6.55102Z"
+									fill="#39393A" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a class="btn-full" href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18.3332 10.0498C18.3329 8.45731 17.8764 6.89824 17.0176 5.55716C16.1588 4.21608 14.9337 3.14915 13.4874 2.48268C12.0411 1.81621 10.4341 1.5781 8.85668 1.79656C7.27925 2.01502 5.79744 2.68088 4.58668 3.71533C3.37592 4.74977 2.48692 6.10948 2.02491 7.63347C1.5629 9.15747 1.54724 10.7819 1.97978 12.3146C2.41232 13.8472 3.27495 15.2238 4.46554 16.2814C5.65613 17.339 7.12483 18.0333 8.69775 18.2821V12.4587H6.58213V10.0498H8.69775V8.21386C8.69775 6.12532 9.94202 4.97167 11.8451 4.97167C12.4702 4.98034 13.0937 5.03465 13.7108 5.13417V7.18522H12.6597C12.4806 7.16143 12.2985 7.17825 12.1267 7.23443C11.955 7.29062 11.7982 7.38472 11.6677 7.50978C11.5373 7.63483 11.4367 7.78763 11.3734 7.95684C11.3101 8.12606 11.2857 8.30735 11.3019 8.4873V10.0498H13.6134L13.2436 12.4587H11.3019V18.2821C13.2622 17.972 15.0475 16.9724 16.3365 15.4633C17.6254 13.9541 18.3335 12.0345 18.3332 10.0498Z"
+									fill="#39393A" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<a class="label-agency" href="https://shapoval.agency/?utm_source=dev&utm_medium=site&utm_campaign=">
+		<img src="img/shapoval-agency.svg" width="109" height="53" alt="image">
+	</a>
+</footer>
+	</div>
+
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

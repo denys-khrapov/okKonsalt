@@ -31,6 +31,49 @@
 		}
 	}
 
+
+
+	.card {
+		&__inner {
+			border: 2px solid transparent;
+			transition: all 0.3s ease 0s;
+		}
+
+		h3,
+		p,
+		h4,
+		span {
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&-slide {
+		&:hover {
+			.card__inner {
+				background: $graphite-900;
+				border: 2px solid $green-source;
+
+				h4 {
+					color: $colors-full-white;
+				}
+
+				h3 {
+					color: $graphite-50;
+				}
+
+				span {
+					color: $green-50;
+				}
+
+				p {
+					color: $graphite-300;
+				}
+			}
+		}
+	}
+
+
+
 }
 
 @media (max-width:$md1) {

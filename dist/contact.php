@@ -46,6 +46,7 @@ if ($post) {
 
 	// сообщение, которое будет отправлено в Telegram
 	$text = "Новое сообщение с сайта:\n\nІм\'я: $name\nТелефон: $phone\nКак связаться: $call\nСсылка: $urlAll";
+	$text = stripslashes($text);
 
 
 	if (!$error) {

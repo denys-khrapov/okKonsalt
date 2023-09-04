@@ -47,68 +47,6 @@
 		column-gap: 24px;
 	}
 
-	&__form-holder {
-		h4 {
-			color: $graphite-900;
-			font-size: 24px;
-			font-weight: 700;
-			line-height: 1.3;
-			margin: 0 0 46px 0;
-		}
-
-		p {
-			color: $graphite-900;
-			margin: 0 0 46px 0;
-		}
-
-		.btn-full {
-			margin-left: auto;
-		}
-	}
-
-	.form {
-		&__input-holder {
-			margin: 0 0 16px 0;
-		}
-
-		input[type=text],
-		input[type=tel] {
-			font-size: 16px;
-			line-height: 1.5;
-			padding: 11px 12px 11px 44px;
-
-			&::placeholder {
-				font-size: 16px;
-				line-height: 1.5;
-			}
-		}
-
-		&__phone-label,
-		&__name-label {
-			font-size: 16px;
-			line-height: 1.5;
-		}
-	}
-
-	.card {
-		position: relative;
-		height: 100%;
-		max-width: 476px;
-
-		&__inner {
-			padding: 48px 32px;
-		}
-	}
-
-	.badge {
-		position: absolute;
-
-		&--orange {
-			top: 16px;
-			right: 16px;
-		}
-	}
-
 	&__column {
 		&--video {
 			display: none;
@@ -193,46 +131,6 @@
 			max-width: 389px;
 		}
 
-		.card {
-			height: auto;
-			max-width: 389px;
-
-			&__inner {
-				padding: 24px 16px;
-			}
-		}
-
-		&__form-holder {
-			h4 {
-				font-size: 16px;
-				max-width: 100px;
-				margin: 0 0 24px 0;
-			}
-
-			p {
-				font-size: 14px;
-				margin: 0 0 24px 0;
-				line-height: 1.3;
-			}
-		}
-
-		.form {
-
-			&__input-holder {
-				margin: 0 0 8px 0;
-			}
-
-			&__phone-label,
-			&__name-label {
-				font-size: 14px;
-				line-height: 1.3;
-			}
-
-			input[type=text],
-			input[type=tel] {
-				padding: 8.5px 12px 8.5px 34px;
-			}
-		}
 
 
 	}

@@ -35,6 +35,26 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border-radius: 16px;
+		transition: all 0.3s ease 0s;
+		border: 2px solid transparent;
+
+		svg {
+			path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+
+		&:hover {
+			background-color: $graphite-900;
+			border: 2px solid $green-source;
+
+			svg {
+				path {
+					fill: $colors-full-white;
+				}
+			}
+		}
 	}
 
 

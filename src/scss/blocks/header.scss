@@ -8,6 +8,7 @@
 
 	&__container {
 		max-width: 1573px;
+		padding: 0 52px;
 	}
 
 	&__burger {
@@ -221,6 +222,7 @@
 	}
 
 	.btn-full {
+		display: none;
 		padding: 6px 16px 6px 8px;
 		color: $graphite-50;
 		font-weight: 400;
@@ -241,6 +243,10 @@
 					}
 				}
 			}
+		}
+
+		&.scroll-to {
+			display: flex;
 		}
 	}
 
@@ -424,6 +430,10 @@
 				font-size: 0;
 				padding: 0;
 				border: 0;
+
+				&.scroll-to {
+					display: none;
+				}
 
 				span {
 					padding: 0;

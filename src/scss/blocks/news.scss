@@ -27,6 +27,60 @@
 			padding: 24px 24px 32px;
 			justify-content: flex-start;
 			row-gap: 24px;
+			transition: all 0.3s ease 0s;
+			border: 2px solid #DDDDDD;
+
+			h4,
+			h5,
+			p,
+			a {
+				transition: all 0.3s ease 0s;
+			}
+
+			a {
+				svg {
+					path {
+						transition: all 0.3s ease 0s;
+					}
+				}
+			}
+
+			&:hover {
+				background-color: $graphite-900;
+				border: 2px solid $green-source;
+
+				h4 {
+					color: $colors-full-white;
+				}
+
+				h5 {
+					color: $colors-full-white;
+				}
+
+				p {
+					color: $graphite-200;
+				}
+
+				a {
+					color: $green-300;
+
+					&:active {
+						color: $green-800;
+
+						svg {
+							path {
+								fill: $green-800;
+							}
+						}
+					}
+
+					svg {
+						path {
+							fill: $green-300;
+						}
+					}
+				}
+			}
 		}
 
 		h4 {
@@ -59,6 +113,8 @@
 			font-weight: 300;
 			margin: 0;
 		}
+
+
 
 	}
 
