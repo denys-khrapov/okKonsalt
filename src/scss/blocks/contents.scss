@@ -1,0 +1,23 @@
+/*! -- Contents styles----------------------------- */
+.contents {
+	padding: 64px 0 128px;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 48px;
+	}
+}
+
+@media (max-width:$md1) {
+
+	/*! -- Contents styles----------------------------- */
+	.contents {
+		padding: 32px 0 96px;
+
+		&__container {
+			align-items: center;
+			row-gap: 64px;
+		}
+	}
+}

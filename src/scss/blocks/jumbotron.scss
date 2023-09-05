@@ -19,6 +19,12 @@
 		column-gap: 124px;
 	}
 
+	&__image-holder {
+		img {
+			border-radius: 4px;
+		}
+	}
+
 	&__title {
 		font-weight: 600;
 		line-height: 1.5;
@@ -26,10 +32,6 @@
 	}
 
 	&__suptitle {
-		color: $graphite-900;
-		font-size: 20px;
-		font-weight: 700;
-		line-height: 1.3;
 		margin: 0 0 48px 0;
 	}
 
@@ -53,6 +55,51 @@
 			}
 		}
 	}
+
+	.badge-box {
+		margin: 48px 0 48px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		&__item {
+			width: fit-content;
+			border-radius: 8px;
+			padding: 8px;
+			background-color: $colors-link;
+			color: $colors-full-white;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 1.3;
+		}
+	}
+
+	&--article {
+		.form {
+			&__inner {
+				display: flex;
+				flex-direction: row;
+				gap: 8px;
+				align-items: center;
+			}
+
+			input[type=text],
+			input[type=tel] {
+				padding: 16px 16px 16px 44px;
+				border-radius: 12px;
+			}
+
+			&__button-holder {
+				margin: 0 0 0 0;
+			}
+
+			.btn-full {
+				text-transform: none;
+			}
+		}
+	}
+
+
 }
 
 
@@ -82,8 +129,6 @@
 		}
 
 		&__suptitle {
-			font-size: 14px;
-			font-weight: 600;
 			margin: 0 0 32px 0;
 		}
 
@@ -108,6 +153,55 @@
 			&--cta-card {
 				width: 100%;
 				max-width: 389px;
+			}
+		}
+
+		&--article {
+
+			.jumbotron__left-column {
+				width: unset;
+				max-width: unset;
+				min-width: 256px;
+			}
+
+			.jumbotron__right-column {
+				width: unset;
+				max-width: unset;
+				min-width: 256px;
+				flex: 1;
+			}
+		}
+
+		&__image-holder {
+			height: 400px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.badge-box {
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 32px 0 32px 0;
+
+			&__item {
+				max-width: 256px;
+				width: 100%;
+			}
+		}
+
+		.form {
+			&__inner {
+				flex-wrap: wrap;
+			}
+
+			input[type=text],
+			input[type=tel] {
+				padding: 12px 16px 12px 44px;
+				border-radius: 8px;
 			}
 		}
 	}

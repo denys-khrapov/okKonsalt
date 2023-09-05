@@ -8,9 +8,9 @@
 	min-height: 376px;
 
 	&__inner {
-		border: 1px solid $graphite-100;
+		outline: 1px solid $graphite-100;
 		border-radius: 24px;
-		padding: 32px;
+		padding: 30px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -54,7 +54,9 @@
 		min-height: auto;
 
 		&__inner {
-			padding: 24px;
+			padding: 22px;
+			outline: 0;
+			border: 1px solid $graphite-100;
 		}
 	}
 }

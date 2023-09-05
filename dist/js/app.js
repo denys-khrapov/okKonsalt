@@ -12,14 +12,17 @@ jQuery(document).ready(function ($) {
       initTypeWriter();
    }
    if (
+      $(".other-articles-slider").length > 0 ||
       $(".team-slider").length > 0 ||
       $(".cases-slider").length > 0 ||
-      $(".articles-slider").length > 0 ||
-      $(".about-slider").length > 0
+      $(".articles-slider").length > 0
    ) {
       initSwiper();
    }
    initTabs();
+   if ($(".about-slider").length > 0) {
+      initAboutSlider();
+   }
 });
 
 function testWebPFunction() {
@@ -202,6 +205,21 @@ function initSwiper() {
       },
    });
 
+   let swiperOtherArticles = new Swiper(".other-articles-slider", {
+      pagination: {
+         el: ".pagination-other-articles",
+         clickable: true,
+      },
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      loop: false,
+      breakpoints: {
+         1280: {
+            spaceBetween: 24,
+         },
+      },
+   });
+
    let swiperCases = new Swiper(".cases-slider", {
       navigation: {
          nextEl: ".button-next-cases",
@@ -239,7 +257,9 @@ function initSwiper() {
          },
       },
    });
+}
 
+function initAboutSlider() {
    function initializeSwiper() {
       if (window.innerWidth >= 1280) {
          return new Swiper(".about-slider", {
@@ -259,6 +279,7 @@ function initSwiper() {
          return null;
       }
    }
+
    let swiperAbout = initializeSwiper();
    window.addEventListener("resize", () => {
       if (swiperAbout) {

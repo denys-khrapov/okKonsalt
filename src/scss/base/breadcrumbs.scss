@@ -9,36 +9,36 @@
 			flex-direction: row;
 			align-items: center;
 			column-gap: 16px;
+			color: $graphite-400;
+			font-size: 14px;
+			line-height: 1.3;
 
-			span {
-				a {
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					column-gap: 4px;
-					color: $graphite-800;
-					font-size: 14px;
-					line-height: 1.3;
-					white-space: nowrap;
+			.links {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				column-gap: 4px;
+				color: $graphite-800;
+				font-size: 14px;
+				line-height: 1.3;
+				white-space: nowrap;
 
-					&:hover {
-						color: $green-300;
-					}
+				&:hover {
+					color: $green-300;
+				}
 
-					&:active {
-						color: $green-800;
-					}
+				&:active {
+					color: $green-800;
 				}
 			}
+
+
 		}
 	}
 
-	&__last {
-		color: $graphite-400;
-		font-size: 14px;
-		line-height: 1.3;
-	}
+
 }
+
 
 
 @media (max-width:$md1) {
