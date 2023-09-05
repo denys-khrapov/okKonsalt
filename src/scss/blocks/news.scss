@@ -27,8 +27,7 @@
 			padding: 24px 24px 32px;
 			justify-content: flex-start;
 			row-gap: 24px;
-			transition: all 0.3s ease 0s;
-			border: 2px solid #DDDDDD;
+			transition: background-color 0.3s ease 0s;
 
 			h4,
 			h5,
@@ -41,43 +40,6 @@
 				svg {
 					path {
 						transition: all 0.3s ease 0s;
-					}
-				}
-			}
-
-			&:hover {
-				background-color: $graphite-900;
-				border: 2px solid $green-source;
-
-				h4 {
-					color: $colors-full-white;
-				}
-
-				h5 {
-					color: $colors-full-white;
-				}
-
-				p {
-					color: $graphite-200;
-				}
-
-				a {
-					color: $green-300;
-
-					&:active {
-						color: $green-800;
-
-						svg {
-							path {
-								fill: $green-800;
-							}
-						}
-					}
-
-					svg {
-						path {
-							fill: $green-300;
-						}
 					}
 				}
 			}
@@ -139,8 +101,85 @@
 		}
 	}
 
+	&--notab {
+		padding: 64px 0 128px;
+
+		.news__container {
+			row-gap: 48px;
+		}
+
+		.news__title {
+			text-align-last: left;
+		}
+
+		.swiper-nav {
+			margin: 0 auto 0 auto;
+		}
+
+		.btn-outline {
+			margin: 0 auto 0 auto;
+		}
+
+		.articles-slide__image-holder {
+			flex: 1 0 auto;
+		}
+
+		.card {
+			max-width: 276px;
+			border-radius: 8px;
+			min-height: 428px;
+			transition: background-color 0.3s ease 0s;
+
+			&__inner {
+				border-radius: 8px;
+			}
+		}
+	}
 }
 
+
+@media (any-hover: hover) {
+	.news {
+		.card {
+			&:hover {
+				background-color: $graphite-900;
+				outline: 2px solid $green-source;
+
+				h4 {
+					color: $colors-full-white;
+				}
+
+				h5 {
+					color: $colors-full-white;
+				}
+
+				p {
+					color: $graphite-200;
+				}
+
+				a {
+					color: $green-300;
+
+					&:active {
+						color: $green-800;
+
+						svg {
+							path {
+								fill: $green-800;
+							}
+						}
+					}
+
+					svg {
+						path {
+							fill: $green-300;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 
@@ -208,6 +247,27 @@
 				}
 			}
 
+		}
+
+		&--notab {
+			padding: 32px 0 64px;
+
+			.news__container {
+				max-width: 100%;
+				row-gap: 24px;
+			}
+
+			.swiper-nav {
+				margin: 8px auto 0 auto;
+			}
+
+			.btn-outline {
+				margin: 8px auto 0 auto;
+			}
+
+			.card {
+				min-height: 264px;
+			}
 		}
 	}
 }

@@ -45,6 +45,16 @@
 			line-height: 1.5;
 		}
 	}
+
+	&.archive {
+		display: none;
+		background-color: $graphite-100;
+		pointer-events: none;
+
+		&.active {
+			display: block;
+		}
+	}
 }
 
 @media (max-width:$md1) {

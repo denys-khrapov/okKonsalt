@@ -153,16 +153,39 @@ function initAccordionHover() {
 
 function initReadMore() {
    var moreText = document.getElementById("more");
+   var moreArchive = document.querySelectorAll(".archive");
    var readMoreBtn = document.getElementById("read-more");
    var readMoreText = document.getElementById("read-more-text");
+   var readMoreTextArchive = document.getElementById("read-more-text-archive");
    var isExpanded = false;
 
    readMoreBtn.addEventListener("click", function () {
       isExpanded = !isExpanded;
-      moreText.style.display = isExpanded ? "flex" : "none";
-      moreText.classList.toggle("active");
+      if (!moreText) {
+      } else {
+         moreText.style.display = isExpanded ? "flex" : "none";
+         moreText.classList.toggle("active");
+      }
+      moreArchive.forEach(function (archive) {
+         archive.style.display = isExpanded ? "block" : "none";
+      });
+
+      moreArchive.forEach(function (archive) {
+         archive.classList.toggle("active");
+      });
+
       this.classList.toggle("active");
-      readMoreText.textContent = isExpanded ? "ЗГОРНУТИ" : "ПОКАЗАТИ ЩЕ";
+
+      if (!readMoreText) {
+      } else {
+         readMoreText.textContent = isExpanded ? "ЗГОРНУТИ" : "ПОКАЗАТИ ЩЕ";
+      }
+      if (!readMoreTextArchive) {
+      } else {
+         readMoreTextArchive.textContent = isExpanded
+            ? "Згорнути"
+            : "Архівні послуги";
+      }
    });
 }
 
