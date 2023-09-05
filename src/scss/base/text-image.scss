@@ -38,6 +38,12 @@
 
 			}
 		}
+
+		p {
+			&+p {
+				margin: 24px 0 0 0;
+			}
+		}
 	}
 
 	.badge-box {
@@ -118,6 +124,12 @@
 		&__text-holder {
 			font-size: 14px;
 			line-height: 1.3;
+
+			p {
+				&+p {
+					margin: 17px 0 0 0;
+				}
+			}
 		}
 
 		.badge-box {

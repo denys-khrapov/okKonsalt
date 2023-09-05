@@ -53,7 +53,7 @@
 			</section>
 
 			<!-- Jumbotron section -->
-			<section class="jumbotron" id="section-jumbotron">
+			<!-- <section class="jumbotron" id="section-jumbotron">
 				<div class="bg-holder">
 					<picture>
 						<source media="(min-width:1280px)" srcset="@img/square-bg.webp" type="image/webp">
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					<div class="jumbotron__right-column jumbotron__right-column--cta-card">
-						<div class="cta__card card cta-card">
+						<div class="card cta-card">
 							<div class="card__inner">
 								<div class="badge badge--orange">
 									<h5>Знижка 10%</h5>
@@ -80,7 +80,130 @@
 										<img src="@img/fire.svg" width="82" height="83" alt="icon">
 									</div>
 								</div>
-								<div class="cta__form-holder">
+								<div class="cta-form-holder">
+									<h4>ШВИДКА ЗАЯВКА</h4>
+									<p>Залишіть свій телефон і ми зв'яжемося з вами та обговоримо всі деталі співпраці!</p>
+									<div id="note"></div>
+									<form class="form" id="ajax-contact-form" action="" data-form-validate="true">
+										<div class="form__inner">
+											<div class="form__phone-label">Ваш телефон</div>
+											<div class="form__input-holder form__input-holder--phone">
+												<span>
+													<input type="tel" value="" name="phone-client"
+														placeholder="+38 (ХХХ) ХХХ - ХХ - ХХ" required />
+												</span>
+											</div>
+											<input type="hidden" name="url">
+											<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+											<div class="form__button-holder">
+												<button class="btn-full" type="submit">
+													ЗАМОВИТИ КОНСУЛЬТАЦІЮ
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section> -->
+
+			<!-- Jumbotron section -->
+			<!-- <section class="jumbotron" id="section-jumbotron">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="@img/square-bg.webp" type="image/webp">
+						<img src="@img/square-bg-mob.png" width="1920" height="744" alt="image">
+					</picture>
+				</div>
+				<div class="jumbotron__container container">
+					<div class="jumbotron__left-column">
+						<h2 class="jumbotron__title title">Юридичні послуги</h2>
+						<h3 class="jumbotron__suptitle suptitle">Юридична підтримка для вашого успіху!</h3>
+						<div class="jumbotron__text-holder">
+							<p>Наші юридичні послуги - це надійний компас у світі права.</p>
+
+							<p>Незалежно від вашої потреби - від створення договорів до рішучого захисту в суді - ми тут, щоб
+								надати вам правову впевненість.
+							</p>
+							<p>Зв'яжіться з нами для ретельної консультації щодо найкращого шляху вперед. 📜🔒🏛️</p>
+						</div>
+					</div>
+					<div class="jumbotron__right-column jumbotron__right-column--cta-card">
+						<div class="card cta-card">
+							<div class="card__inner">
+								<div class="badge badge--orange">
+									<h5>Знижка 10%</h5>
+									<span>на контракт від 3 місяців!</span>
+									<div class="badge__svg-holder">
+										<img src="@img/fire.svg" width="82" height="83" alt="icon">
+									</div>
+								</div>
+								<div class="cta-form-holder">
+									<h4>ШВИДКА ЗАЯВКА</h4>
+									<p>Залишіть свій телефон і ми зв'яжемося з вами та обговоримо всі деталі співпраці!</p>
+									<div id="note"></div>
+									<form class="form" id="ajax-contact-form" action="" data-form-validate="true">
+										<div class="form__inner">
+											<div class="form__phone-label">Ваш телефон</div>
+											<div class="form__input-holder form__input-holder--phone">
+												<span>
+													<input type="tel" value="" name="phone-client"
+														placeholder="+38 (ХХХ) ХХХ - ХХ - ХХ" required />
+												</span>
+											</div>
+											<input type="hidden" name="url">
+											<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+											<div class="form__button-holder">
+												<button class="btn-full" type="submit">
+													ЗАМОВИТИ КОНСУЛЬТАЦІЮ
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section> -->
+
+			<!-- Jumbotron section -->
+			<section class="jumbotron" id="section-jumbotron">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="@img/square-bg.webp" type="image/webp">
+						<img src="@img/square-bg-mob.png" width="1920" height="744" alt="image">
+					</picture>
+				</div>
+				<div class="jumbotron__container container">
+					<div class="jumbotron__left-column">
+						<h2 class="jumbotron__title title">Консалтингові послуги</h2>
+						<h3 class="jumbotron__suptitle suptitle">Вітаємо в “OK-CONSALTING”!</h3>
+						<div class="jumbotron__text-holder">
+							<p>Тут ми не просто консультуємо, а власне "варимо бульйон" із інноваційних ідей для вашого
+								бізнесу!</p>
+							<p>Ми - своєрідні "археологи" успіху, готові розкопувати найцікавіші можливості у вашій ніші.</p>
+							<p>Тут ви не знайдете стандартних "рецептів", а лише найсвіжіші "інгредієнти" для досягнення ваших
+								цілей.</p>
+							<p>Не обережні підходи, а тільки "космічні стрибки" до висот вашого успіху. Наважайтеся на
+								відмінність разом з нами!</p>
+						</div>
+					</div>
+					<div class="jumbotron__right-column jumbotron__right-column--cta-card">
+						<div class="card cta-card">
+							<div class="card__inner">
+								<div class="badge badge--orange">
+									<h5>Знижка 10%</h5>
+									<span>на контракт від 3 місяців!</span>
+									<div class="badge__svg-holder">
+										<img src="@img/fire.svg" width="82" height="83" alt="icon">
+									</div>
+								</div>
+								<div class="cta-form-holder">
 									<h4>ШВИДКА ЗАЯВКА</h4>
 									<p>Залишіть свій телефон і ми зв'яжемося з вами та обговоримо всі деталі співпраці!</p>
 									<div id="note"></div>
@@ -109,9 +232,8 @@
 
 				</div>
 			</section>
-
 			<!-- Listing section -->
-			<section class="listing" id="section-listing">
+			<!-- <section class="listing" id="section-listing">
 				<div class="listing__container container">
 					<div class="listing__header">
 						<h3 class="listing__subtitle subtitle">БУХГАЛТЕРСЬКІ ПОСЛУГИ</h3>
@@ -181,6 +303,271 @@
 								<div class="card">
 									<div class="card__inner">
 										<h5>Консультації </h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+							</div>
+							<button id="read-more" class="btn-outline">
+								<span id="read-more-text-archive">Архівні послуги</span>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16.5813 7.83128L10.3313 14.0813C10.2434 14.1691 10.1242 14.2184 10 14.2184C9.87581 14.2184 9.75667 14.1691 9.66878 14.0813L3.41878 7.83128C3.33598 7.74242 3.2909 7.62489 3.29304 7.50345C3.29518 7.38201 3.34438 7.26615 3.43026 7.18026C3.51615 7.09438 3.63201 7.04518 3.75345 7.04304C3.87489 7.0409 3.99242 7.08598 4.08128 7.16878L10 13.0867L15.9188 7.16878C16.0076 7.08598 16.1252 7.0409 16.2466 7.04304C16.368 7.04518 16.4839 7.09438 16.5698 7.18026C16.6557 7.26615 16.7049 7.38201 16.707 7.50345C16.7092 7.62489 16.6641 7.74242 16.5813 7.83128Z"
+										fill="#39393A" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+			<!-- Listing section -->
+			<!-- <section class="listing" id="section-listing">
+				<div class="listing__container container">
+					<div class="listing__header">
+						<h3 class="listing__subtitle subtitle">ЮРИДИЧНІ ПОСЛУГИ</h3>
+						<h2 class="listing__title title">Послуги в цьому розділі</h2>
+					</div>
+					<div class="listing__row">
+						<div class="listing__left-column">
+							<div class="person">
+								<div class="person__row">
+									<div class="person__left-column">
+										<div class="person__image-holder">
+											<img src="@img/ludmila-avatar.jpg" width="65" height="65" alt="image">
+										</div>
+									</div>
+									<div class="person__right-column">
+										<h5 class="person__name">Чемерис Людмила</h5>
+										<div class="person__text">
+											<p>Як юрист із роками досвіду, я розумію, що справи, пов'язані з правом, можуть бути
+												заплутаними та незрозумілими.</p>
+											<p>Моя мета - допомогти вам зрозуміти ваші права та вибрати найкращий шлях вперед.
+												🕵️‍♂️
+												Чи ви створюєте новий бізнес, переглядаєте угоди, чи потребуєте захисту в суді - моя
+												команда та я завжди готові бути поруч з вами.</p>
+											<p>Ми ретельно аналізуємо вашу ситуацію, пропонуємо вам варіанти та працюємо на
+												результат. 💼📜</p>
+											<p>Ваші інтереси - наш пріоритет. Працюючи з нами, ви можете бути впевнені, що
+												отримаєте висококваліфіковану, професійну та конфіденційну підтримку на кожному
+												етапі. 🔒✨</p>
+											<p>Залиште свої правові турботи на наші плечі. Ми готові допомогти вам реалізувати ваші
+												права та досягнути цілей.</p>
+
+										</div>
+										<div class="person__position">Начальник юридичного відділу</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="listing__right-column">
+							<div class="listing__cards">
+								<div class="card">
+									<div class="card__inner">
+										<h5>Реєстрація ТОВ/ФОП</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Реєстрація ТОВ/ФОП</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Розробка договорів</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Адміністративне оскарження</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Претензійно-позивна робота</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Юридична консультація</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+								<div class="card archive">
+									<div class="card__inner">
+										<div class="badge badge--small">
+											<span>АРХІВ</span>
+										</div>
+										<h5>Назва послуги</h5>
+									</div>
+								</div>
+							</div>
+							<button id="read-more" class="btn-outline">
+								<span id="read-more-text-archive">Архівні послуги</span>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16.5813 7.83128L10.3313 14.0813C10.2434 14.1691 10.1242 14.2184 10 14.2184C9.87581 14.2184 9.75667 14.1691 9.66878 14.0813L3.41878 7.83128C3.33598 7.74242 3.2909 7.62489 3.29304 7.50345C3.29518 7.38201 3.34438 7.26615 3.43026 7.18026C3.51615 7.09438 3.63201 7.04518 3.75345 7.04304C3.87489 7.0409 3.99242 7.08598 4.08128 7.16878L10 13.0867L15.9188 7.16878C16.0076 7.08598 16.1252 7.0409 16.2466 7.04304C16.368 7.04518 16.4839 7.09438 16.5698 7.18026C16.6557 7.26615 16.7049 7.38201 16.707 7.50345C16.7092 7.62489 16.6641 7.74242 16.5813 7.83128Z"
+										fill="#39393A" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+			<!-- Listing section -->
+			<section class="listing" id="section-listing">
+				<div class="listing__container container">
+					<div class="listing__header">
+						<h3 class="listing__subtitle subtitle">КОНСАЛТИНГОВІ ПОСЛУГИ</h3>
+						<h2 class="listing__title title">Послуги в цьому розділі</h2>
+					</div>
+					<div class="listing__row">
+						<div class="listing__left-column">
+							<div class="person">
+								<div class="person__row">
+									<div class="person__left-column">
+										<div class="person__image-holder">
+											<img src="@img/olga-avatar-2.jpg" width="65" height="65" alt="image">
+										</div>
+									</div>
+									<div class="person__right-column">
+										<h5 class="person__name">Дерев’янко Ольга</h5>
+										<div class="person__text">
+											<p>🚀 Ласкаво просимо на борт інноваційного корабля, де ми разом відкриваємо горизонти
+												нового успіху!</p>
+											<p>Я - капітан цього екіпажу, і моя місія - привести нашу компанію до нових вершин.</p>
+											<p>З нами ви відчуєте, що "двері відчиняються" в інший бізнес-вимір, де звичайність –
+												це архаїзм, а інновації – наша щоденна норма.</p>
+											<p>Ми – не лише команда, ми - "креативні теслярі", що витворяють майстерність з вашою
+												мрією про успіх. Разом ми "намічаємо курс" до великих досягнень. Відчуйте
+												"пульсацію" ефективності та ентузіазму в нашій команді! 🌟🏆🎉</p>
+										</div>
+										<div class="person__position">Директор компанії</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="listing__right-column">
+							<div class="listing__cards">
+								<div class="card">
+									<div class="card__inner">
+										<h5>Податкове планування</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Постановка та ведення управлінського обліку </h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Супровід податкових перевірок</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Автоматизація бізнес процесів</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Автоматизація бізнес процесів</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Послуга фінансового менеджера</h5>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card__inner">
+										<h5>Фінансовий директор на аутсорсі</h5>
 									</div>
 								</div>
 								<div class="card archive">

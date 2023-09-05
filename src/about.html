@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/head.html',{
+'title':'About'
+})
+
+<body>
+	<div class="wrapper">
+		<div class="bg-noise-holder" style="background-image: url('img/noise.png');">
+		</div>
+		@@include('html/header.html',{})
+		<main class="content">
+
+			<!-- Breadcrumbs -->
+			<section class="breadcrumbs">
+				<div class="breadcrumbs__container container">
+					<div id="breadcrumbs__list" class="breadcrumbs__list">
+						<span>
+							<span>
+								<a class="links" href="index.html">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M14.478 7.52875L13.143 6.19541L8.47061 1.52869C8.34544 1.40371 8.17569 1.3335 7.9987 1.3335C7.82171 1.3335 7.65196 1.40371 7.52679 1.52869L2.85438 6.19541L1.5194 7.52875C1.39781 7.65449 1.33054 7.82289 1.33206 7.99769C1.33358 8.17249 1.40378 8.3397 1.52753 8.46331C1.65129 8.58692 1.81871 8.65703 1.99372 8.65855C2.16873 8.66007 2.33734 8.59287 2.46323 8.47143L2.6588 8.27609V13.3335C2.6588 13.6871 2.79945 14.0263 3.04981 14.2763C3.30016 14.5264 3.63972 14.6668 3.99378 14.6668H5.99624C6.17327 14.6668 6.34304 14.5966 6.46822 14.4716C6.5934 14.3465 6.66372 14.177 6.66372 14.0002V11.3335C6.66372 11.1566 6.73405 10.9871 6.85923 10.8621C6.98441 10.737 7.15418 10.6668 7.33121 10.6668H8.66619C8.84321 10.6668 9.01299 10.737 9.13817 10.8621C9.26335 10.9871 9.33367 11.1566 9.33367 11.3335V14.0002C9.33367 14.177 9.404 14.3465 9.52917 14.4716C9.65435 14.5966 9.82413 14.6668 10.0012 14.6668H12.0036C12.3577 14.6668 12.6972 14.5264 12.9476 14.2763C13.1979 14.0263 13.3386 13.6871 13.3386 13.3335V8.27609L13.5342 8.47143C13.6601 8.59287 13.8287 8.66007 14.0037 8.65855C14.1787 8.65703 14.3461 8.58692 14.4699 8.46331C14.5936 8.3397 14.6638 8.17249 14.6653 7.99769C14.6669 7.82289 14.5996 7.65449 14.478 7.52875Z"
+											fill="#4B4B4D" />
+									</svg>
+									Головна
+								</a>
+							</span>
+							<span class="brDevider">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M11.2635 8.26492L6.26346 13.2649C6.19237 13.3312 6.09835 13.3672 6.0012 13.3655C5.90405 13.3638 5.81135 13.3244 5.74265 13.2557C5.67394 13.187 5.63459 13.0943 5.63287 12.9972C5.63116 12.9 5.66722 12.806 5.73346 12.7349L10.4678 7.99992L5.73346 3.26492C5.66722 3.19384 5.63116 3.09981 5.63287 3.00266C5.63459 2.90551 5.67394 2.81282 5.74265 2.74411C5.81135 2.67541 5.90405 2.63605 6.0012 2.63434C6.09835 2.63262 6.19237 2.66868 6.26346 2.73492L11.2635 7.73492C11.3337 7.80524 11.3731 7.90055 11.3731 7.99992C11.3731 8.0993 11.3337 8.19461 11.2635 8.26492Z"
+										fill="#4B4B4D" />
+								</svg>
+							</span>
+							<span class="breadcrumbs__last" aria-current="page">Про нас
+							</span>
+
+						</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Jumbotron section -->
+			<section class="jumbotron" id="section-jumbotron">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="@img/square-bg.webp" type="image/webp">
+						<img src="@img/square-bg-mob.png" width="1920" height="744" alt="image">
+					</picture>
+				</div>
+				<div class="jumbotron__container container">
+					<div class="jumbotron__left-column">
+						<h2 class="jumbotron__title title">Ласкаво просимо у світ консалтингу,</h2>
+						<h3 class="jumbotron__suptitle suptitle">де бухгалтерія та юридичні послуги набувають нового рівня!
+						</h3>
+						<div class="jumbotron__text-holder">
+							<p>Ми - команда справжніх ентузіастів, зібраних разом для того, щоб зробити ваш бізнес ще
+								успішнішим. За нашими плечима понад 10 років роботи в цій сфері, і цей час був насичений
+								вивченням, зростанням та навчаннямся на власних помилках.</p>
+						</div>
+						<div class="cta-form-holder">
+							<div id="note"></div>
+							<form class="form" id="ajax-contact-form" action="" data-form-validate="true">
+								<div class="form__inner">
+									<div class="form__input-holder form__input-holder--phone">
+										<span>
+											<input type="tel" value="" name="phone-client" placeholder="+38 (ХХХ) ХХХ - ХХ - ХХ"
+												required />
+										</span>
+									</div>
+									<input type="hidden" name="url">
+									<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+									<div class="form__button-holder">
+										<button class="btn-full" type="submit">
+											Хочу консультацію
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.5813 10.3313L8.33128 16.5813C8.24242 16.6641 8.12489 16.7092 8.00345 16.707C7.88201 16.7049 7.76615 16.6557 7.68026 16.5698C7.59438 16.4839 7.54518 16.368 7.54304 16.2466C7.5409 16.1252 7.58598 16.0076 7.66878 15.9188L13.5867 10L7.66878 4.08128C7.58598 3.99242 7.5409 3.87489 7.54304 3.75345C7.54518 3.63201 7.59438 3.51615 7.68026 3.43026C7.76615 3.34438 7.88201 3.29518 8.00345 3.29304C8.12489 3.2909 8.24242 3.33598 8.33128 3.41878L14.5813 9.66878C14.6691 9.75667 14.7184 9.87581 14.7184 10C14.7184 10.1242 14.6691 10.2434 14.5813 10.3313Z"
+													fill="#F8F8FA" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contents section -->
+			<section class="contents contents--about" id="section-contents">
+				<div class="contents__container container">
+					<div class="text-image">
+						<div class="text-image__text">
+							<h3 class="text-image__title title">Ваш бізнес – ноти, що звучать в гармонії</h3>
+							<div class="text-image__text-holder">
+								<p>Ми знаємо, що бухгалтерія - це не лише числа та рахунки. Це мова вашого бізнесу, яку ми
+									вивчили на відмінності.</p>
+								<p>Ми знаємо кожен акорд цього музичного твору, де гармонія бухгалтерських записів та юридичних
+									аспектів створює неперевершений симфонічний образ вашої компанії.</p>
+							</div>
+						</div>
+						<div class="text-image__image">
+							<div class="text-image__image-holder">
+								<picture>
+									<source media="(min-width: 1280px)" srcset="@img/about-img-1.webp" type="image/webp">
+									<img src="@img/about-img-1-mob.jpg" width="476" height="400" alt="image">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="text-image">
+						<div class="text-image__image">
+							<div class="text-image__image-holder">
+								<picture>
+									<source media="(min-width: 1280px)" srcset="@img/about-img-2.webp" type="image/webp">
+									<img src="@img/about-img-2-mob.jpg" width="476" height="400" alt="image">
+								</picture>
+							</div>
+						</div>
+						<div class="text-image__text">
+							<h3 class="text-image__title title">Співтворці Вашого успіху</h3>
+							<div class="text-image__text-holder">
+								<p>Наше завдання - не просто вести ваші фінанси та дотримувати законодавство.</p>
+								<p>Ми прагнемо бути вашими партнерами, співтворцями успіху, людьми, на яких ви можете
+									покластися, незалежно від ситуації.</p>
+								<p>Ми розуміємо, що ваш бізнес - це ваша мрія, і ми готові робити все можливе, щоб ця мрія
+									розквітла.</p>
+							</div>
+						</div>
+					</div>
+					<div class="text-image">
+						<div class="text-image__text">
+							<h3 class="text-image__title title">Вітаємо у світі гармонії для вашого бізнесу</h3>
+							<div class="text-image__text-holder">
+								<p>Тож вітаємо вас у нашому барвистому світі, де числа набувають значення, а юридичні
+									переплетення стають ниткою, що тримає ваш бізнес разом.</p>
+								<p>Разом ми створимо гармонію, яка звучатиме довго і надійно.</p>
+							</div>
+						</div>
+						<div class="text-image__image">
+							<div class="text-image__image-holder">
+								<picture>
+									<source media="(min-width: 1280px)" srcset="@img/about-img-3.webp" type="image/webp">
+									<img src="@img/about-img-3-mob.jpg" width="476" height="400" alt="image">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About section -->
+			<section class="about" id="section-about">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width: 1280px)" srcset="@img/about-bg.webp" type="image/webp">
+						<img src="@img/about-bg-mob.jpg" width="1920" height="767" alt="image">
+					</picture>
+				</div>
+				<div class="about__container container">
+					<div class="about__slider swiper-container about-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide about-slide">
+								<div class="promo">
+									<div class="promo__inner">
+										<div class="promo__logo-holder">
+											<img src="@img/logo-promo-bold.svg" width="144" height="38" alt="logo">
+										</div>
+										<div class="promo__decor-holder">
+											<img src="@img/promo-decor.png" width="376" height="521" alt="image">
+										</div>
+										<div class="promo__content">
+											<h3>ПРО КОМПАНІЮ</h3>
+											<p>Ми - команда висококваліфікованих та досвідчених бухгалтерів, маємо досвід роботи
+												понад 10 років, що дозволяє нам упевнено стверджувати, що ми знаємо всі тонкощі та
+												нюанси в галузі бухгалтерії.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide about-slide">
+								<div class="about__card card">
+									<div class="card__inner">
+										<div class="arguments">
+											<div class="arguments__item">
+												<h4>10</h4>
+												<span>років успішної діяльності</span>
+											</div>
+											<div class="arguments__item">
+												<h4>400+</h4>
+												<span>постійних
+													клієнтів</span>
+											</div>
+											<div class="arguments__item">
+												<h4>1000+</h4>
+												<span>щорічних
+													звітів</span>
+											</div>
+											<div class="arguments__item">
+												<h4>10+</h4>
+												<span>сфер діяльності клієнтів</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide about-slide">
+								<div class="about__card card">
+									<div class="card__inner">
+										<h3>Професійна бухгалтерія для успішного бізнесу</h3>
+										<p>Розуміємо, що професійне ведення бухгалтерії – запорука успіху будь-якого бізнесу. Тому
+											наші фахівці завжди здають роботу вчасно та ретельно контролюють зміни у законодавстві,
+											щоб гарантувати відповідність усім актуальним вимогам.</p>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide about-slide">
+								<div class="about__card card">
+									<div class="card__inner">
+										<h3>Історія компанії
+											"OK - CONSALTING"</h3>
+										<p>Наша історія сягає своїм корінням в заснування компанії на основі досвіду і болю друзів
+											підприємців. Ми самі стикалися з труднощами ведення обліку та бухгалтерії, і саме ці
+											труднощі надихнули нас створити послугу, яка допомагає іншим підприємцям упоратися з
+											цими викликами.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="about__nav swiper-nav">
+						<div class="swiper-button-prev button-prev-about">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12.8313 15.9188C12.8774 15.9617 12.9143 16.0134 12.9399 16.0709C12.9656 16.1284 12.9793 16.1905 12.9804 16.2535C12.9816 16.3164 12.97 16.3789 12.9464 16.4373C12.9228 16.4956 12.8877 16.5487 12.8432 16.5932C12.7987 16.6377 12.7457 16.6728 12.6873 16.6964C12.629 16.7199 12.5664 16.7315 12.5035 16.7304C12.4406 16.7293 12.3785 16.7155 12.321 16.6899C12.2635 16.6643 12.2117 16.6273 12.1688 16.5813L5.91883 10.3313C5.83104 10.2434 5.78174 10.1242 5.78174 10C5.78174 9.87581 5.83104 9.75667 5.91883 9.66878L12.1688 3.41878C12.2577 3.33598 12.3752 3.2909 12.4967 3.29304C12.6181 3.29518 12.734 3.34438 12.8198 3.43026C12.9057 3.51615 12.9549 3.63201 12.9571 3.75345C12.9592 3.87489 12.9141 3.99242 12.8313 4.08128L6.91336 10L12.8313 15.9188Z"
+									fill="#39393A" />
+							</svg>
+						</div>
+						<div class="pagination-about"></div>
+						<div class="swiper-button-next button-next-about">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M14.0813 10.3314L7.83128 16.5814C7.74242 16.6642 7.62489 16.7093 7.50345 16.7071C7.38201 16.705 7.26615 16.6558 7.18026 16.5699C7.09438 16.484 7.04518 16.3682 7.04304 16.2467C7.0409 16.1253 7.08598 16.0078 7.16878 15.9189L13.0867 10.0001L7.16878 4.0814C7.08598 3.99254 7.0409 3.87501 7.04304 3.75357C7.04518 3.63213 7.09438 3.51627 7.18026 3.43038C7.26615 3.3445 7.38201 3.29531 7.50345 3.29316C7.62489 3.29102 7.74242 3.3361 7.83128 3.4189L14.0813 9.6689C14.1691 9.75679 14.2184 9.87593 14.2184 10.0001C14.2184 10.1244 14.1691 10.2435 14.0813 10.3314Z"
+									fill="#39393A" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Team section -->
+			<section class="team" id="section-team">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="@img/team-bg.webp" type="image/webp">
+						<img src="@img/team-bg-mob.png" width="1920" height="1011" alt="image">
+					</picture>
+				</div>
+				<div class="team__container container">
+					<div class="team__header">
+						<h3 class="team__subtitle subtitle">ЛЮДИ, ЩО РОБЛЯТЬ ВЕЛИКУ СПРАВУ</h3>
+						<h2 class="team__title title">Наші спеціалісти</h2>
+					</div>
+					<div class="team__slider swiper-container team-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide team-slide">
+								<div class="team-slide__inner">
+									<div class="team__image-holder">
+										<img src="@img/team-img-1.jpg" width="276" height="276" alt="image">
+									</div>
+									<div class="person">
+										<div class="person__row">
+											<div class="person__column">
+												<h5 class="person__name">Дерев’янко Ольга</h5>
+												<div class="person__position">Директор компанії</div>
+											</div>
+										</div>
+									</div>
+									<div class="chat">
+										"Питання бізнесу – це загадки, а ми – ключі, які розкривають потенціал успішних
+										рішень."
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide team-slide">
+								<div class="team-slide__inner">
+									<div class="chat">
+										"Фінанси - це основа будь-якої успішної компанії."
+									</div>
+									<div class="team__image-holder">
+										<img src="@img/team-img-2.jpg" width="276" height="276" alt="image">
+									</div>
+									<div class="person">
+										<div class="person__row">
+											<div class="person__column">
+												<h5 class="person__name">Черняк Марія</h5>
+												<div class="person__position">Головний бухгалтер</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide team-slide">
+								<div class="team-slide__inner">
+									<div class="team__image-holder">
+										<img src="@img/team-img-3.jpg" width="276" height="276" alt="image">
+									</div>
+									<div class="person">
+										<div class="person__row">
+											<div class="person__column">
+												<h5 class="person__name">Чемерис Людмила</h5>
+												<div class="person__position">Начальник юридичного відділу</div>
+											</div>
+										</div>
+									</div>
+									<div class="chat">
+										"Наша робота – допомагати нашим клієнтам приймати правильні рішення, навіть якщо це
+										нелегко"
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide team-slide">
+								<div class="team-slide__inner">
+									<div class="chat">
+										"Податкові консультації можуть допомогти вам заощадити гроші і захистити себе від
+										юридичних проблем"
+									</div>
+									<div class="team__image-holder">
+										<img src="@img/team-img-4.jpg" width="276" height="276" alt="image">
+									</div>
+									<div class="person">
+										<div class="person__row">
+											<div class="person__column">
+												<h5 class="person__name">Бречко Ірина</h5>
+												<div class="person__position">Начальник відділу оподаткування ФОП. Голова оркестру
+													оподаткування для ФОПів</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide team-slide">
+								<div class="team-slide__inner">
+									<div class="team__image-holder">
+										<img src="@img/team-img-5.jpg" width="276" height="276" alt="image">
+									</div>
+									<div class="person">
+										<div class="person__row">
+											<div class="person__column">
+												<h5 class="person__name">Черняк Вікторія</h5>
+												<div class="person__position">Бухгалтер з ПДВ. Майстер цифр та рахунків</div>
+											</div>
+										</div>
+									</div>
+									<div class="chat">
+										"Ми тут, щоб допомогти вам вести бізнес успішно."
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide team-slide">
+								<div class="team-slide__inner">
+									<div class="chat">
+										Зарплата: нотатки життя, де кожна цифра – відлуння праці та таланту.
+									</div>
+									<div class="team__image-holder">
+										<img src="@img/team-img-6.jpg" width="276" height="276" alt="image">
+									</div>
+									<div class="person">
+										<div class="person__row">
+											<div class="person__column">
+												<h5 class="person__name">Горбова Алла</h5>
+												<div class="person__position">Ведення кадрового обліку та нарахування заробітної
+													плати з особливим шармом</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="team__nav swiper-nav">
+						<div class="swiper-button-prev button-prev-team">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12.8313 15.9188C12.8774 15.9617 12.9143 16.0134 12.9399 16.0709C12.9656 16.1284 12.9793 16.1905 12.9804 16.2535C12.9816 16.3164 12.97 16.3789 12.9464 16.4373C12.9228 16.4956 12.8877 16.5487 12.8432 16.5932C12.7987 16.6377 12.7457 16.6728 12.6873 16.6964C12.629 16.7199 12.5664 16.7315 12.5035 16.7304C12.4406 16.7293 12.3785 16.7155 12.321 16.6899C12.2635 16.6643 12.2117 16.6273 12.1688 16.5813L5.91883 10.3313C5.83104 10.2434 5.78174 10.1242 5.78174 10C5.78174 9.87581 5.83104 9.75667 5.91883 9.66878L12.1688 3.41878C12.2577 3.33598 12.3752 3.2909 12.4967 3.29304C12.6181 3.29518 12.734 3.34438 12.8198 3.43026C12.9057 3.51615 12.9549 3.63201 12.9571 3.75345C12.9592 3.87489 12.9141 3.99242 12.8313 4.08128L6.91336 10L12.8313 15.9188Z"
+									fill="#39393A" />
+							</svg>
+						</div>
+						<div class="pagination-team"></div>
+						<div class="swiper-button-next button-next-team">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M14.0813 10.3314L7.83128 16.5814C7.74242 16.6642 7.62489 16.7093 7.50345 16.7071C7.38201 16.705 7.26615 16.6558 7.18026 16.5699C7.09438 16.484 7.04518 16.3682 7.04304 16.2467C7.0409 16.1253 7.08598 16.0078 7.16878 15.9189L13.0867 10.0001L7.16878 4.0814C7.08598 3.99254 7.0409 3.87501 7.04304 3.75357C7.04518 3.63213 7.09438 3.51627 7.18026 3.43038C7.26615 3.3445 7.38201 3.29531 7.50345 3.29316C7.62489 3.29102 7.74242 3.3361 7.83128 3.4189L14.0813 9.6689C14.1691 9.75679 14.2184 9.87593 14.2184 10.0001C14.2184 10.1244 14.1691 10.2435 14.0813 10.3314Z"
+									fill="#39393A" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA section -->
+			<section class="cta" id="section-cta">
+				<div class="bg-holder">
+					<picture>
+						<source media="(min-width:1280px)" srcset="@img/cta-bg.webp" type="image/webp">
+						<img src="@img/cta-bg-mob.png" width="1920" height="994" alt="image">
+					</picture>
+				</div>
+				<div class="cta__container container">
+					<div class="cta__header">
+						<h3 class="cta__subtitle subtitle">ЗАМОВЛЕННЯ ІНДИВІДУАЛЬНОГО РОЗРАХУНКУ</h3>
+						<h2 class="cta__title title">Замовте розрахунок
+							прямо зараз!</h2>
+					</div>
+					<div class="cta__row">
+						<div class="cta__column">
+							<div class="promo">
+								<div class="promo__inner">
+									<div class="promo__logo-holder">
+										<img src="@img/logo-promo.svg" width="127" height="30" alt="logo">
+									</div>
+									<div class="promo__image-holder">
+										<picture>
+											<source media="(min-width:1280px)" srcset="@img/promo-img.webp" type="image/webp">
+											<img src="@img/promo-img-mob.png" width="242" height="442" alt="image">
+										</picture>
+									</div>
+
+									<div class="promo__decor-holder">
+										<img src="@img/promo-decor.png" width="376" height="521" alt="image">
+									</div>
+									<div class="promo__content">
+										<h3>КОМПЛЕКСНИЙ БУХГАЛТЕРСЬКИЙ СУПРОВІД</h3>
+										<p>Для отримання індивідуального розрахунку, дайте відповідь на декілька питань</p>
+										<a class="btn-full" href="#">
+											РОЗПОЧАТИ ЗАРАЗ
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M14.0813 10.3314L7.83128 16.5814C7.74242 16.6642 7.62489 16.7093 7.50345 16.7071C7.38201 16.705 7.26615 16.6558 7.18026 16.5699C7.09438 16.484 7.04518 16.3682 7.04304 16.2467C7.0409 16.1253 7.08598 16.0078 7.16878 15.9189L13.0867 10.0001L7.16878 4.0814C7.08598 3.99254 7.0409 3.87501 7.04304 3.75357C7.04518 3.63213 7.09438 3.51627 7.18026 3.43038C7.26615 3.3445 7.38201 3.29531 7.50345 3.29316C7.62489 3.29102 7.74242 3.3361 7.83128 3.4189L14.0813 9.6689C14.1691 9.75679 14.2184 9.87593 14.2184 10.0001C14.2184 10.1244 14.1691 10.2435 14.0813 10.3314Z"
+													fill="#39393A" />
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cta__column">
+							<div class="cta__card card cta-card">
+								<div class="card__inner">
+									<div class="badge badge--orange">
+										<h5>Знижка 10%</h5>
+										<span>на контракт від 3 місяців!</span>
+										<div class="badge__svg-holder">
+											<img src="@img/fire.svg" width="82" height="83" alt="icon">
+										</div>
+									</div>
+									<div class="cta-form-holder">
+										<h4>ШВИДКА ЗАЯВКА</h4>
+										<p>Залишіть свій телефон і ми зв'яжемося з вами та обговоримо всі деталі співпраці!</p>
+										<div id="note"></div>
+										<form class="form" id="ajax-contact-form" action="" data-form-validate="true">
+											<div class="form__inner">
+												<div class="form__name-label">Ваше ім'я</div>
+												<div class="form__input-holder form__input-holder--user">
+													<span>
+														<input type="text" value="" name="name-client"
+															placeholder="Наприклад: Григорій Сковорода" required />
+													</span>
+												</div>
+												<div class="form__phone-label">Ваш телефон</div>
+												<div class="form__input-holder form__input-holder--phone">
+													<span>
+														<input type="tel" value="" name="phone-client"
+															placeholder="+38 (ХХХ) ХХХ - ХХ - ХХ" required />
+													</span>
+												</div>
+												<input type="hidden" name="url">
+												<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+												<div class="form__button-holder">
+													<button class="btn-full" type="submit">
+														ЗАМОВИТИ КОНСУЛЬТАЦІЮ
+													</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cta__column cta__column--video">
+							<video autoplay muted loop preload="auto" playsinline class="timeline__video">
+								<source type="video/webm" src="video/timeline-video.webm">
+								<source type="video/mp4" src="video/timeline-video.mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+				<div class="bg-video">
+					<video autoplay muted loop preload="auto" playsinline class="timeline__video">
+						<source type="video/webm" src="video/timeline-video.webm">
+						<source type="video/mp4" src="video/timeline-video.mp4">
+					</video>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
