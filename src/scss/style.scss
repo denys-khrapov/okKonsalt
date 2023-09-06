@@ -186,6 +186,8 @@ body {
 }
 
 
+@import "base/related-services";
+@import "base/contents-article";
 @import "base/text-image";
 @import "base/lang";
 @import "base/tabs";
@@ -225,3 +227,4 @@ body {
 @import "blocks/other-articles";
 @import "blocks/seo";
 @import "blocks/listing";
+@import "blocks/article";

@@ -1,0 +1,65 @@
+/*! -- Related-services styles----------------------------- */
+.related-services {
+	padding: 48px 32px;
+	border-radius: 16px;
+	background-color: $colors-background-placeholder;
+	display: flex;
+	flex-direction: column;
+	row-gap: 32px;
+
+	h4 {
+		color: $green-source;
+		font-weight: 700;
+		line-height: 32px;
+		padding-left: 40px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -22px;
+			transform: translateY(-50%);
+			background-image: url('../img/backpack.png');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 74px;
+			height: 75px;
+		}
+	}
+
+	.accordion-hover {
+		row-gap: 16px;
+
+		&__wrapper {
+			box-shadow: none;
+		}
+
+	}
+}
+
+@media (max-width:$md1) {
+
+	/*! -- Related-services styles----------------------------- */
+	.related-services {
+		padding: 24px 16px;
+		row-gap: 24px;
+
+		h4 {
+			line-height: 1.3;
+
+			&::before {
+				left: -5px;
+				background-image: url('../img/backpack-mob.png');
+				width: 54px;
+				height: 55px;
+			}
+		}
+
+		.accordion-hover {
+			row-gap: 8px;
+
+		}
+	}
+}

@@ -62,11 +62,13 @@
 	/*! -- Cards styles----------------------------- */
 	.card {
 		min-height: auto;
+		border-radius: 8px;
 
 		&__inner {
 			padding: 22px;
 			outline: 0;
 			border: 1px solid $graphite-100;
+			border-radius: 8px;
 		}
 	}
 }
